@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:text="산책하시려구요?"
-        android:textSize="20dp"산
+        android:textSize="20dp"
         android:textColor="#626873"
         android:fontFamily="@font/pretendard_medium"
         android:letterSpacing="-0.025"
