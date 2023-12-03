@@ -2,164 +2,195 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp">
+
+        <Button
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/arrow_back"
+            android:layout_gravity="center_vertical"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:text="회원가입"
+            android:textColor="@color/bold"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:fontFamily="@font/pretendard_semibold"/>
+
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:orientation="vertical">
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="bottom"
+        android:weightSum="3">
+
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendard_medium"
+            android:gravity="center_horizontal"
+            android:text="1단계"
+            android:textSize="18dp"
+            android:textColor="@color/bold"
+            android:paddingBottom="8dp"
+            android:background="@drawable/bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2단계"
+            android:textSize="18dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:textColor="@color/basic3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="3단계"
+            android:textSize="18dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:textColor="@color/basic3"/>
+
+    </LinearLayout>
+
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="회원가입"
-            android:textSize="40dp"
-            android:gravity="center"
-            android:fontFamily="@font/pretendard_regular"/>
-    </LinearLayout>
+            android:src="@drawable/line"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3">
-
-        <TextView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/border"
-            android:fontFamily="@font/pretendard_regular"
-            android:gravity="center"
-            android:text="1단계"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/border"
-            android:gravity="center"
-            android:text="2단계"
-            android:textSize="30dp"
-            android:fontFamily="@font/pretendard_regular"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/border"
-            android:gravity="center"
-            android:text="3단계"
-            android:textSize="30dp"
-            android:fontFamily="@font/pretendard_regular"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="541dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="개인정보 입력"
-            android:textSize="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="15dp"
-            android:fontFamily="@font/pretendard_regular"
-            />
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text="개인정보를 입력해주세요"
+            android:textColor="@color/bold"
+            android:textSize="24dp" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/pretendard_semibold"
             android:text="이름"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="15dp"
-            android:fontFamily="@font/pretendard_regular"
-            />
+            android:textColor="@color/basic1"
+            android:textSize="24dp" />
 
         <EditText
-            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="전대 최고 귀요미 김승현"
-            android:background="#ced4da"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:fontFamily="@font/pretendard_regular"/>
+            android:layout_height="56dp"
+            android:background="@drawable/text_box"
+            android:fontFamily="@font/pretendard_medium"
+            android:hint="전대 최고 귀요미 김승현"
+            android:paddingLeft="16dp"
+            android:textColorHint="@color/hint"
+            android:textSize="18dp" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/pretendard_semibold"
             android:text="나이"
-            android:textSize="20dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="15dp"
-            android:fontFamily="@font/pretendard_regular"
-            />
+            android:textColor="@color/basic1"
+            android:textSize="24dp" />
 
         <EditText
-            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="00세"
-            android:background="#ced4da"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:fontFamily="@font/pretendard_regular"/>
+            android:layout_height="56dp"
+            android:background="@drawable/text_box"
+            android:fontFamily="@font/pretendard_medium"
+            android:hint="64"
+            android:paddingLeft="16dp"
+            android:textColorHint="@color/hint"
+            android:textSize="18dp" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/pretendard_semibold"
             android:text="성별"
-            android:textSize="20dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="15dp"
-            android:fontFamily="@font/pretendard_regular"
-            />
+            android:textColor="@color/basic1"
+            android:textSize="24dp" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_width="140dp"
+                android:layout_height="56dp"
+                android:background="@drawable/text_box"
+                android:fontFamily="@font/pretendard_semibold"
                 android:text="남"
-                android:textSize="20dp"
-                android:fontFamily="@font/pretendard_regular"/>
+                android:textSize="22dp"
+                style="?android:attr/borderlessButtonStyle" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_width="140dp"
+                android:layout_height="56dp"
+                android:fontFamily="@font/pretendard_semibold"
                 android:text="여"
                 android:textSize="20dp"
-                android:fontFamily="@font/pretendard_regular"/>
+                android:layout_gravity="right"
+                android:background="@drawable/text_box"
+                style="?android:attr/borderlessButtonStyle"/>
+
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
 
-        <!--버튼색 없애기 : tmemes.xml에서 MaterialComponents -> AppCompat-->
         <Button
             android:id="@+id/register1button"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="56dp"
             android:text="다음으로"
-            android:textColor="@color/black"
-            android:textSize="30dp"
-            android:background="#ffffff"
-            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:background="@color/theme2"
+            android:fontFamily="@font/pretendard_semibold"
             />
     </LinearLayout>
 </LinearLayout>
