@@ -13,6 +13,7 @@
         android:layout_marginRight="24dp">
 
         <Button
+            android:id="@+id/back1"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:background="@drawable/arrow_back"

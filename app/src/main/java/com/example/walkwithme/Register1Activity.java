@@ -24,6 +24,15 @@ public class Register1Activity extends AppCompatActivity {
             }
         });
 
+        Button btn = (Button) findViewById(R.id.back1);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), IntroActivity.class);
+                startActivity(intent);
+            }
+        });
+
         //액션바 없애기
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();

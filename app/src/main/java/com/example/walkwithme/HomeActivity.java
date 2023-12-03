@@ -97,6 +97,16 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        //더보기 버튼 클릭 리스너
+        TextView textView = (TextView) findViewById(R.id.detail);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Detail.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private class GetDataTask extends AsyncTask<Void, Void, String> {
