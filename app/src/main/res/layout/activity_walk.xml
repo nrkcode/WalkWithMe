@@ -1,10 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/hint">
+    <!-- 회색배경에 지도가 들어가야함, 색은 임시로 넣은것 -->
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/walk_bg_box"
+        android:layout_gravity="center_horizontal|bottom"/>
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="5dp"
+        android:src="@drawable/walk_bg_bar"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="188dp"/>
+
+    <!-- 산책 시작하기 버튼 -->
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="46dp"
+        android:text="산책 시작하기"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:letterSpacing="-0.025"
+        android:fontFamily="@font/pretendard_semibold"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:drawableLeft="@drawable/start"
+        android:background="#00ff0000"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="120dp"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="120dp"
+        android:src="@drawable/walk_start_box"
+        android:visibility="visible"/>
+
+
+    <!-- 산책 타이머 -->
+    <Button
+        android:layout_width="172dp"
+        android:layout_height="46dp"
+        android:text="00:00:00"
+        android:textSize="24dp"
+        android:textColor="@color/theme2"
+        android:letterSpacing="-0.025"
+        android:fontFamily="@font/pretendard_semibold"
+        android:background="#00ff0000"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:drawableLeft="@drawable/pause"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="120dp"
+        android:layout_marginRight="36dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="172dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="120dp"
+        android:src="@drawable/walking"
+        android:layout_marginRight="36dp"
+        android:visibility="invisible"/>
+
+    <!-- 산책 멈춤 버튼 -->
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#00ff0000"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="125dp"
+        android:layout_marginLeft="80dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/stop"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="125dp"
+        android:layout_marginLeft="80dp"
+        android:visibility="invisible"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="14dp"
+        android:layout_gravity="bottom">
+
+        <!-- 걸음 수 -->
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/record"
+            android:layout_marginBottom="14dp"
+            />
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:text="걸음 수"
+                android:textSize="12dp"
+                android:textColor="@color/basic1"
+                android:fontFamily="@font/pretendard_medium"
+                android:letterSpacing="-0.025"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:text="1,234"
+                android:textSize="24dp"
+                android:textColor="@color/bold"
+                android:fontFamily="@font/pretendard_medium"
+                android:letterSpacing="-0.025"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:text="걸음"
+                android:textSize="12dp"
+                android:textColor="@color/basic1"
+                android:fontFamily="@font/pretendard_medium"
+                android:letterSpacing="-0.025"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <!-- 걸은 거리 -->
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/record"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="14dp"
+            />
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:text="걸은 거리"
+                android:textSize="12dp"
+                android:textColor="@color/basic1"
+                android:fontFamily="@font/pretendard_medium"
+                android:letterSpacing="-0.025"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:text="3.7"
+                android:textSize="24dp"
+                android:textColor="@color/bold"
+                android:fontFamily="@font/pretendard_medium"
+                android:letterSpacing="-0.025"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:text="km"
+                android:textSize="12dp"
+                android:textColor="@color/basic1"
+                android:fontFamily="@font/pretendard_medium"
+                android:letterSpacing="-0.025"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <!-- 소모 열량 -->
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/record"
+            android:layout_gravity="right"
+            android:layout_marginBottom="14dp"
+            />
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:orientation="vertical"
+            android:layout_gravity="right">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:text="소모 열량"
+                android:textSize="12dp"
+                android:textColor="@color/basic1"
+                android:fontFamily="@font/pretendard_medium"
+                android:letterSpacing="-0.025"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:text="131"
+                android:textSize="24dp"
+                android:textColor="@color/bold"
+                android:fontFamily="@font/pretendard_medium"
+                android:letterSpacing="-0.025"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:text="kcal"
+                android:textSize="12dp"
+                android:textColor="@color/basic1"
+                android:fontFamily="@font/pretendard_medium"
+                android:letterSpacing="-0.025"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
 
 
 
 
 
-</LinearLayout>
+
+</FrameLayout>
