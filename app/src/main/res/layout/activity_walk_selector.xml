@@ -31,9 +31,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="398dp"
+        android:layout_height="match_parent"
         android:paddingTop="54dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_weight="1">
 
         <FrameLayout
             android:id="@+id/btn_rcnd"
@@ -74,6 +75,11 @@
                 android:textSize="20dp" />
         </FrameLayout>
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
         <FrameLayout
             android:id="@+id/btn_rdnd2"
             android:layout_width="144dp"
@@ -110,18 +116,12 @@
                 android:layout_marginTop="124dp"
                 android:fontFamily="@font/pretendard_semibold"
                 android:letterSpacing="-0.025"
-                android:text="산책 바로\n시작하기"
+                android:text="산책 바로\n시작 하기"
                 android:textColor="@color/basic1"
                 android:textSize="20dp" />
         </FrameLayout>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="bottom">
 
         <!-- 하단 네비게이션 바 -->
         <LinearLayout
@@ -129,28 +129,28 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:orientation="horizontal"
-            android:layout_gravity="bottom">
+            android:background="@color/white">
 
             <LinearLayout
                 android:id="@+id/menu_layout1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@color/white">
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/home"
                     android:layout_gravity="center"
+                    app:tint="@color/basic3"
                     android:layout_marginTop="8dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="16dp"
                     android:text="홈"
-                    android:textColor="@color/bold"
+                    android:textColor="@color/basic3"
                     android:textSize="12dp"
                     android:fontFamily="@font/pretendard_medium"
                     android:layout_gravity="center"/>
@@ -163,8 +163,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@color/white">
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="24dp"
@@ -176,7 +175,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="16dp"
-                    android:text="홈"
+                    android:text="산책"
                     android:textColor="@color/bold"
                     android:textSize="12dp"
                     android:fontFamily="@font/pretendard_medium"
@@ -189,12 +188,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"/>
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/person"
+                    android:layout_gravity="center"
+                    app:tint="@color/basic3"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:text="내정보"
+                    android:textColor="@color/basic3"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
 
         </LinearLayout>
-
-
-    </LinearLayout>
 
 
 </LinearLayout>
