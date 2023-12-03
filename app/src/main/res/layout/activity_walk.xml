@@ -7,7 +7,7 @@
     <!-- 회색배경에 지도가 들어가야함, 색은 임시로 넣은것 -->
     <!--들어갓습니다.-->
     <!-- MapView -->
-    <com.kakao.vectormap.MapView
+    <RelativeLayout
         android:id="@+id/map_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
