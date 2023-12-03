@@ -2,67 +2,61 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="646dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center">
 
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/check_circle"
+            app:tint="@color/theme1"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="회원가입이"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="12dp"
+            android:text="회원가입 완료"
             android:gravity="center"
-            android:textSize="35dp"/>
+            android:textSize="35dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/bold"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="완료되었습니다!"
-            android:textSize="35dp" />
-
-        <TextView
-            android:layout_marginTop="7dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="이제 ~를 즐겨보세요"
-            android:textSize="20dp" />
-
-
+            android:text="회원가입이 완료되었습니다!\n이제부터 산책 코스를 추천해드릴게요"
+            android:textSize="20dp"
+            android:fontFamily="@font/pretendard_medium"/>
 
 
     </LinearLayout>
 
 
+    <!-- 버튼 -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
 
-        <!--버튼색 없애기 : tmemes.xml에서 MaterialComponents -> AppCompat-->
-        <LinearLayout
+        <Button
+            android:id="@+id/register4button"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/register4button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#ffffff"
-                android:fontFamily="@font/pretendard_regular"
-                android:text="확인"
-                android:textColor="@color/black"
-                android:textSize="30dp" />
-
-
-        </LinearLayout>
-
+            android:layout_height="56dp"
+            android:text="확인"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:background="@color/theme2"
+            android:fontFamily="@font/pretendard_semibold"
+            />
     </LinearLayout>
 </LinearLayout>

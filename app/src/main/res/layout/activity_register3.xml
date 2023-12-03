@@ -2,266 +2,359 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:orientation="vertical">
+        android:layout_height="48dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp">
+
+        <Button
+            android:id="@+id/register3buttonback"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/arrow_back"
+            android:layout_gravity="center_vertical"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/pretendard_regular"
-            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
             android:text="회원가입"
-            android:textSize="40dp" />
-    </LinearLayout>
+            android:textColor="@color/bold"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:fontFamily="@font/pretendard_semibold"/>
 
+    </FrameLayout>
+
+    <!-- 1단계 ~ 3단계 -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="bottom"
         android:weightSum="3">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/line"
-            android:fontFamily="@font/pretendard_regular"
-            android:gravity="center"
+            android:fontFamily="@font/pretendard_medium"
+            android:gravity="center_horizontal"
             android:text="1단계"
-
-            android:textSize="30dp"
-            />
+            android:textSize="18dp"
+            android:textColor="@color/basic3"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/line"
-            android:fontFamily="@font/pretendard_regular"
             android:gravity="center"
             android:text="2단계"
-            android:textSize="30dp"
-            />
+            android:textSize="18dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:textColor="@color/basic3"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/line"
-            android:fontFamily="@font/pretendard_regular"
             android:gravity="center"
             android:text="3단계"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
+            android:textSize="18dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:textColor="@color/bold"
+            android:paddingBottom="8dp"
+            android:background="@drawable/bold"/>
 
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"/>
+
+
+    <!-- 하단 바 -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="541dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/pretendard_regular"
-            android:text="좋아하는 산책 방법을 골라주세요"
-            android:textSize="30dp" />
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text="좋아하는 산책 방법을\n알려주세요"
+            android:textColor="@color/bold"
+            android:textSize="24dp" />
 
+
+        <!-- 장소 -->
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/pretendard_regular"
-            android:text="취향에 맞게 추천드릴 수 있어요"
-            android:textSize="20dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/pretendard_regular"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/pretendard_semibold"
             android:text="장소"
+            android:textColor="@color/basic1"
             android:textSize="20dp" />
 
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TableRow>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
-            </TableRow>
-            <TableRow>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="@drawable/select_box"
+                android:fontFamily="@font/pretendard_regular"
+                android:paddingHorizontal="16dp"
+                android:text="공원"
+                android:textSize="14dp" />
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
-            </TableRow>
-            <TableRow>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/select_box"
+                android:fontFamily="@font/pretendard_regular"
+                android:paddingHorizontal="16dp"
+                android:text="운동장"
+                android:textSize="14dp" />
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
-            </TableRow>
-            <TableRow>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/select_box"
+                android:fontFamily="@font/pretendard_regular"
+                android:padding="0dp"
+                android:text="저수지"
+                android:textSize="14dp" />
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/pretendard_regular"
-                    android:text="근린공원"
-                    android:textSize="16dp"/>
-            </TableRow>
-        </TableLayout>
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/select_box"
+                android:fontFamily="@font/pretendard_regular"
+                android:padding="0dp"
+                android:text="테마공원"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/select_box"
+                android:fontFamily="@font/pretendard_regular"
+                android:padding="0dp"
+                android:text="자연공원"
+                android:textSize="14dp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/select_box"
+                android:fontFamily="@font/pretendard_regular"
+                android:paddingHorizontal="16dp"
+                android:text="식물원"
+                android:textSize="14dp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/select_box"
+                android:fontFamily="@font/pretendard_regular"
+                android:padding="0dp"
+                android:text="휴양림"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
 
 
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/select_box"
+                android:fontFamily="@font/pretendard_regular"
+                android:paddingHorizontal="16dp"
+                android:text="저수지"
+                android:textSize="14dp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/select_box"
+                android:fontFamily="@font/pretendard_regular"
+                android:padding="0dp"
+                android:text="유원지"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:src="@color/line"
+            android:layout_marginTop="24dp"/>
+
+
+        <!-- 시설 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text="시설"
+            android:textColor="@color/basic1"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/pretendard_regular"
+                android:text="놀이터"
+                android:textSize="14dp"
+                android:background="@drawable/select_box"
+                android:paddingHorizontal="16dp"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/pretendard_regular"
+                android:text="바닥분수"
+                android:textSize="14dp"
+                android:padding="0dp"
+                android:background="@drawable/select_box"
+                android:layout_marginLeft="8dp"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/pretendard_regular"
+                android:text="도서관"
+                android:textSize="14dp"
+                android:padding="0dp"
+                android:background="@drawable/select_box"
+                android:layout_marginLeft="8dp"
+                style="?android:attr/borderlessButtonStyle"/>
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/pretendard_regular"
+                android:text="화장실"
+                android:textSize="14dp"
+                android:background="@drawable/select_box"
+                android:paddingHorizontal="16dp"
+                android:layout_marginLeft="8dp"
+                style="?android:attr/borderlessButtonStyle"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/pretendard_regular"
+                android:text="주차장"
+                android:textSize="14dp"
+                android:padding="0dp"
+                android:background="@drawable/select_box"
+                style="?android:attr/borderlessButtonStyle"/>
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/pretendard_regular"
+                android:text="경로당"
+                android:textSize="14dp"
+                android:padding="0dp"
+                android:background="@drawable/select_box"
+                android:layout_marginLeft="8dp"
+                style="?android:attr/borderlessButtonStyle"/>
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/pretendard_regular"
+                android:text="마을회관"
+                android:textSize="14dp"
+                android:padding="0dp"
+                android:background="@drawable/select_box"
+                android:layout_marginLeft="8dp"
+                style="?android:attr/borderlessButtonStyle"/>
+
+        </LinearLayout>
 
 
 
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
 
-        <!--버튼색 없애기 : tmemes.xml에서 MaterialComponents -> AppCompat-->
-        <LinearLayout
+        <Button
+            android:id="@+id/register3buttonfront"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/register3buttonback"
-                android:layout_width="202dp"
-                android:layout_height="match_parent"
-                android:background="#ffffff"
-                android:fontFamily="@font/pretendard_regular"
-                android:text="이전으로"
-                android:textColor="@color/black"
-                android:textSize="30dp" />
-
-            <Button
-                android:id="@+id/register3buttonfront"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#ffffff"
-                android:fontFamily="@font/pretendard_regular"
-                android:text="다음으로"
-                android:textColor="@color/black"
-                android:textSize="30dp" />
-        </LinearLayout>
-
+            android:layout_height="56dp"
+            android:text="다음으로"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:background="@color/theme2"
+            android:fontFamily="@font/pretendard_semibold"
+            />
     </LinearLayout>
 </LinearLayout>
