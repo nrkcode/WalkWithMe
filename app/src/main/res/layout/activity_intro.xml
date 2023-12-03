@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="오늘 산책 어디로 가지?"
+            android:textSize="20dp"
+            android:textColor="#292A2B"
+            android:letterSpacing="-0.025"
+            android:fontFamily="@font/pretendard_medium"
+            android:gravity="center"
+            android:layout_gravity="bottom|center_horizontal"
+            />
+
+    </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="산책"
+                    android:textSize="48dp"
+                    android:textColor="#1C85E8"
+                    android:letterSpacing="-0.025"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:gravity="center"
+                    android:layout_gravity="top"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_gravity=""
+                    android:fontFamily="@font/pretendard_bold"
+                    android:gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:text="어디가?"
+                    android:textColor="#2cc8a7"
+                    android:letterSpacing="-0.025"
+                    android:textSize="48dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+</LinearLayout>
