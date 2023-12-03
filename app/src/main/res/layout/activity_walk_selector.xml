@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/text">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:text="산책하시려구요?"
+        android:textSize="20dp"
+        android:textColor="#626873"
+        android:fontFamily="@font/pretendard_medium"
+        android:letterSpacing="-0.025"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="220dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="둘 중 하나를 선택해주세요!"
+        android:textSize="28dp"
+        android:textColor="#000000"
+        android:fontFamily="@font/pretendard_semibold"
+        android:letterSpacing="-0.025"
+        android:layout_gravity="center"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="144dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="54dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/home_steps_box"
+            android:elevation="16dp"
+            android:id="@+id/btn_rcnd">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="36dp"
+                android:src="@drawable/thumb_up"
+                app:tint="@color/theme2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="106dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:letterSpacing="-0.025"
+                android:text="나에게 딱 맞는"
+                android:textColor="#626873"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="124dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:letterSpacing="-0.025"
+                android:text="산책 코스\n추천 받기"
+                android:textColor="@color/basic1"
+                android:textSize="20dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="144dp"
+            android:layout_height="200dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="54dp"
+            android:background="@drawable/home_steps_box"
+            android:elevation="16dp"
+            >
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="36dp"
+                android:src="@drawable/directions_run"
+                app:tint="@color/theme1" />
+
+            <TextView
+                android:id="@+id/btn_justStart"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="106dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:letterSpacing="-0.025"
+                android:text="추천 받지 않고"
+                android:textColor="#626873"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="124dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:letterSpacing="-0.025"
+                android:text="산책 바로\n시작하기"
+                android:textColor="@color/basic1"
+                android:textSize="20dp" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
