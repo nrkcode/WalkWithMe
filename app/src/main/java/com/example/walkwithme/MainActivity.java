@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,7 +17,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -52,11 +56,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         System.out.println("listView: " + listView);
-        System.out.println("adapter: "+ adapter);
+        System.out.println("adapter: " + adapter);
 
 
         adapter.addItem(R.drawable.rectangle_40, "전남대학교 용지", "저수지");
-
 
 
         //액션바 없애기
@@ -68,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
 
                     case R.id.menu_home:
                         setFrag(0);
@@ -87,9 +90,22 @@ public class MainActivity extends AppCompatActivity {
 
         setFrag(0); //첫화면 설정
 
+        //메뉴선택시 화면 변경 인텐트
+        LinearLayout linear1 = (LinearLayout) findViewById(R.id.menu_layout1);
+        LinearLayout linear2 = (LinearLayout) findViewById(R.id.menu_layout2);
+        LinearLayout linear3 = (LinearLayout) findViewById(R.id.menu_layout3);
+
+        linear2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), WalkActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
+
 
     /* 리스트뷰 어댑터 */
     public class ListViewAdapter extends BaseAdapter {
@@ -175,4 +191,5 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
 }
