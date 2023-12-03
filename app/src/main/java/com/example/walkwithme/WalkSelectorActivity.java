@@ -22,30 +22,16 @@ public class WalkSelectorActivity extends AppCompatActivity {
         frame1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "산책 코스 추천 받기!", Toast.LENGTH_SHORT).show();
+                // 프레임 레이아웃 클릭 시 산책 리스트 화면인 one.xml로 인텐트
+                Intent intent = new Intent(getApplicationContext(), one.class);
+                startActivity(intent);
             }
         });
         frame2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "산책 바로 시작하기!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
-        //액션바 없애기
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-
-        //메뉴선택시 화면 변경 인텐트
-        LinearLayout linear1 = (LinearLayout) findViewById(R.id.menu_layout1);
-        LinearLayout linear2 = (LinearLayout) findViewById(R.id.menu_layout2);
-        LinearLayout linear3 = (LinearLayout) findViewById(R.id.menu_layout3);
-
-        linear2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), WalkSelectorActivity.class);
+                // 프레임 레이아웃 클릭 시 산책중 화면인 activity_walk.xml로 인텐트
+                Intent intent = new Intent(getApplicationContext(), InWalk.class);
                 startActivity(intent);
             }
         });

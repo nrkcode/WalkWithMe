@@ -23,9 +23,6 @@
         android:theme="@style/Theme.WalkWithMe"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
             android:name=".WalkSelectorActivity"
             android:exported="false" />
         <activity
@@ -37,8 +34,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".HomeActivity"/>
+        <activity android:name=".InWalk"/>
+        <activity android:name=".one"/>
         <activity android:name=".Register1Activity"/>
         <activity android:name=".Register2Activity"/>
         <activity android:name=".Register3Activity"/>
