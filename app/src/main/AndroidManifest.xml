@@ -22,9 +22,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WalkWithMe"
         tools:targetApi="31">
-        <meta-data
-            android:name="com.kakao.vectormap.APP_KEY"
-            android:value="e933a40a65276772456895a7618f03af"/>
         <activity
             android:name=".WalkSelectorActivity"
             android:exported="false" />
