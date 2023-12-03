@@ -270,13 +270,92 @@
         android:layout_marginTop="16dp"
         android:orientation="vertical">
 
-        <ListView
-            android:id="@+id/listview"
-            android:layout_width="wrap_content"
-            android:layout_height="550dp"/>
+        <!-- 여기에 데이터 리스트 -->
 
 
     </LinearLayout>
+
+
+
+    <!-- 하단 네비게이션 바 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+
+        <LinearLayout
+            android:id="@+id/main_frame"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:id="@+id/menu_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/home"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:text="홈"
+                    android:textColor="@color/bold"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/menu_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/directions_run"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:text="홈"
+                    android:textColor="@color/bold"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 
 
 
