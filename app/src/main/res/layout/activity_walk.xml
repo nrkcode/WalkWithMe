@@ -170,9 +170,10 @@
                 android:layout_marginTop="10dp"/>
 
             <TextView
+                android:id="@+id/stepCountView"
                 android:layout_width="wrap_content"
                 android:layout_height="28dp"
-                android:text="1,234"
+                android:text="0"
                 android:textSize="24dp"
                 android:textColor="@color/bold"
                 android:fontFamily="@font/pretendard_medium"
