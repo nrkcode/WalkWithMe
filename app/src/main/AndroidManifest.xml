@@ -40,7 +40,6 @@
         <activity android:name=".HomeActivity"/>
         <activity android:name=".InWalk"/>
         <activity android:name=".RecommendationActivity"/>
-        <activity android:name=".Detail"/>
         <activity android:name=".Register1Activity"/>
         <activity android:name=".Register2Activity"/>
         <activity android:name=".Register3Activity"/>

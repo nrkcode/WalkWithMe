@@ -14,7 +14,7 @@
         android:layout_marginRight="24dp">
 
         <Button
-            android:id="@+id/back2"
+            android:id="@+id/back"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:background="@drawable/arrow_back"
@@ -43,7 +43,7 @@
 
         <!-- 여기에 데이터 리스트 -->
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView3"
+            android:id="@+id/recyclerVie2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 

@@ -46,7 +46,7 @@ public class RecommendationActivity extends AppCompatActivity {
 
     private FusedLocationProviderClient fusedLocationClient;
     private String kakaoApiKey = "bd2e505109d0952fa9d393afd54028aa";
-    private RecyclerView recyclerView3;
+    private RecyclerView recyclerView2;
     private PlaceAdapter placeAdapter;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
 
@@ -60,7 +60,7 @@ public class RecommendationActivity extends AppCompatActivity {
         actionBar.hide();
 
         //뒤로가기 구현
-        Button btn = (Button) findViewById(R.id.back2);
+        Button btn = (Button) findViewById(R.id.back);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,10 +86,10 @@ public class RecommendationActivity extends AppCompatActivity {
         }
 
         // RecyclerView 초기화
-        recyclerView3 = findViewById(R.id.recyclerView3);
-        recyclerView3.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView2 = findViewById(R.id.recyclerVie2);
+        recyclerView2.setLayoutManager(new LinearLayoutManager(this));
         placeAdapter = new PlaceAdapter();
-        recyclerView3.setAdapter(placeAdapter);
+        recyclerView2.setAdapter(placeAdapter);
     }
 
     private void requestLocation() {

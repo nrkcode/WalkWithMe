@@ -52,7 +52,9 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-
+        //액션바 없애기
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         //아래부터recycler
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
@@ -80,12 +82,8 @@ public class HomeActivity extends AppCompatActivity {
 
         // AsyncTask 실행
         new GetDataTask().execute();
-        //액션바 없애기
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
 
         //메뉴선택시 화면 변경 인텐트
-        LinearLayout linear1 = (LinearLayout) findViewById(R.id.menu_layout1);
         LinearLayout linear2 = (LinearLayout) findViewById(R.id.menu_layout2);
         LinearLayout linear3 = (LinearLayout) findViewById(R.id.menu_layout3);
 
@@ -97,12 +95,23 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        // 내정보로 인텐트
+        /*
+        linear3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), WalkSelectorActivity.class);
+                startActivity(intent);
+            }
+        });
+         */
+
         //더보기 버튼 클릭 리스너
         TextView textView = (TextView) findViewById(R.id.detail);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Detail.class);
+                Intent intent = new Intent(getApplicationContext(), RecommendationActivity.class);
                 startActivity(intent);
             }
         });
