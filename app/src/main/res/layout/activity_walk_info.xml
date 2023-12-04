@@ -43,8 +43,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
                 android:orientation="vertical">
 
@@ -52,7 +50,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -110,13 +110,15 @@
                 <!-- 리스트1 주소 -->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="16dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
                     android:layout_marginTop="8dp">
 
                     <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
                         android:src="@drawable/pin_drop"
                         app:tint="@color/basic2"
                         android:layout_gravity="center_vertical"/>
@@ -124,11 +126,12 @@
                     <TextView
                         android:id="@+id/addressTextView"
                         android:layout_width="match_parent"
-                        android:layout_height="16dp"
+                        android:layout_height="20dp"
                         android:text="광주 북구 용봉동 77"
                         android:textSize="14dp"
                         android:textColor="@color/basic2"
-                        android:layout_marginLeft="4dp"/>
+                        android:layout_marginLeft="4dp"
+                        android:layout_gravity="center_vertical"/>
                 </LinearLayout>
 
                 <!-- 리스트1 산책 세부기록 -->
@@ -136,6 +139,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
                     android:layout_marginTop="8dp">
 
                     <TextView
@@ -204,26 +209,27 @@
                     android:textColor="@color/basic1"
                     android:textSize="18dp"
                     android:fontFamily="@font/pretendard_medium"
-                    android:layout_marginLeft="12dp"
+                    android:layout_marginLeft="36dp"
                     android:letterSpacing="-0.025"/>
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/line"
-                    android:layout_marginTop="8dp"
-                    app:tint="@color/theme2"/>
+                    android:layout_marginTop="4dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="전남대학교 안에 인공 호수로 많은 사람들이 오가는 주요 명소 중 하나이다. 특히 봄엔 벚꽃나무, 가을엔 단풍나무의 풍경을 볼 수 있어
 사진 명소로 불린다. 저수지 이지만 걷기 좋은 길과 벤치들이 있어 쉽게 산책할 수 있다."
-                    android:textSize="14dp"
+                    android:textSize="16dp"
                     android:textColor="@color/basic1"
                     android:fontFamily="@font/pretendard_regular"
                     android:letterSpacing="-0.025"
                     android:layout_marginTop="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
                     android:lineSpacingExtra="2dp"/>
 
 
