@@ -183,8 +183,10 @@ public class HomeActivity extends AppCompatActivity {
                 String placeName = placeObject.getString("place_name");
                 String placeAddress = placeObject.getString("road_address_name");
                 String placeCategory = placeObject.getString("category_name");
+                String placeDistance = placeObject.getString("distance");
 
-                places.add(new Place(placeName, placeAddress,placeCategory));
+
+                places.add(new Place(placeName, placeAddress,placeCategory,placeDistance));
             }
 
             runOnUiThread(() -> placeAdapter.setPlaces(places));
@@ -197,12 +199,14 @@ public class HomeActivity extends AppCompatActivity {
         private final String name;
         private final String address;
         private final String category;
+        private final String distance;
 
 
-        public Place(String name, String address, String category) {
+        public Place(String name, String address, String category, String distance) {
             this.name = name;
             this.address = address;
             this.category = category;
+            this.distance = distance;
 
         }
 
@@ -212,9 +216,12 @@ public class HomeActivity extends AppCompatActivity {
 
         public String getAddress() {return address;}
 
-        public String getCategory() {
-            return category;
+        public String getCategory() {return category;}
+
+        public String getDistance() {
+            return distance+"m";
         }
+
 
     }
 
@@ -239,6 +246,8 @@ public class HomeActivity extends AppCompatActivity {
             holder.nameTextView.setText(place.getName());
             holder.addressTextView.setText(place.getAddress());
             holder.categoryTextView.setText(place.getCategory());
+            holder.distanceTextView.setText(place.getDistance());
+
 
         }
 
@@ -251,12 +260,15 @@ public class HomeActivity extends AppCompatActivity {
             TextView nameTextView;
             TextView addressTextView;
             TextView categoryTextView;
+            TextView distanceTextView;
 
             public PlaceViewHolder(@NonNull View itemView) {
                 super(itemView);
                 nameTextView = itemView.findViewById(R.id.nameTextView);
                 addressTextView = itemView.findViewById(R.id.addressTextView);
                 categoryTextView = itemView.findViewById(R.id.categoryTextView);
+                distanceTextView = itemView.findViewById(R.id.distanceTextView);
+
             }
         }
     }

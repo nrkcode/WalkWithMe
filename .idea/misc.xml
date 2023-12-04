@@ -48,8 +48,14 @@
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/drawable-v24/walk_bg_box.xml" value="0.174" />
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/drawable-v24/walk_start_box.xml" value="0.174" />
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/drawable/shape_for_circle_button_ksh.xml" value="0.174" />
-        <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/activity_list_item.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/activity_detail.xml" value="0.1" />
+        <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/activity_home.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/activity_list_item.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/activity_walk.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/activity_walk_info.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/activity_walk_selector.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/item_place.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/one.xml" value="0.18333333333333332" />
       </map>
     </option>
   </component>
