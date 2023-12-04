@@ -1,6 +1,7 @@
 package com.example.walkwithme;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,10 +32,12 @@ public class Register1Activity extends AppCompatActivity {
                 if (isChecked) {
                     femaleButton.setChecked(false);
                     maleButton.setBackgroundResource(R.drawable.text_box);
+                    maleButton.setTextColor(Color.parseColor("#ffffff"));
                     user_gender = "남";
                 } else {
                     user_gender = "";
                     maleButton.setBackgroundResource(R.drawable.text_box);
+                    maleButton.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -45,10 +48,12 @@ public class Register1Activity extends AppCompatActivity {
                 if (isChecked) {
                     maleButton.setChecked(false);
                     femaleButton.setBackgroundResource(R.drawable.text_box);
+                    femaleButton.setTextColor(Color.parseColor("#ffffff"));
                     user_gender = "여";
                 } else {
                     user_gender = "";
                     femaleButton.setBackgroundResource(R.drawable.text_box);
+                    femaleButton.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });

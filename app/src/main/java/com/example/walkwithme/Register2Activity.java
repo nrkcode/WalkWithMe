@@ -1,6 +1,7 @@
 package com.example.walkwithme;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -40,10 +41,12 @@ public class Register2Activity extends AppCompatActivity {
                     user_bindo4.setChecked(false);
                     user_bindo5.setChecked(false);
                     user_bindo1.setBackgroundResource(R.drawable.select_box);
+                    user_bindo1.setTextColor(Color.parseColor("#ffffff"));
                     user_bindo = "거의 안함";
                 } else {
                     user_bindo = "";
                     user_bindo1.setBackgroundResource(R.drawable.select_box);
+                    user_bindo1.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -57,9 +60,11 @@ public class Register2Activity extends AppCompatActivity {
                     user_bindo5.setChecked(false);
                     user_bindo2.setBackgroundResource(R.drawable.select_box);
                     user_bindo = "주1~2회";
+                    user_bindo2.setTextColor(Color.parseColor("#ffffff"));
                 } else {
                     user_bindo = "";
                     user_bindo2.setBackgroundResource(R.drawable.select_box);
+                    user_bindo2.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -73,9 +78,11 @@ public class Register2Activity extends AppCompatActivity {
                     user_bindo5.setChecked(false);
                     user_bindo3.setBackgroundResource(R.drawable.select_box);
                     user_bindo = "주3~4회";
+                    user_bindo3.setTextColor(Color.parseColor("#ffffff"));
                 } else {
                     user_bindo = "";
                     user_bindo3.setBackgroundResource(R.drawable.select_box);
+                    user_bindo3.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -88,10 +95,12 @@ public class Register2Activity extends AppCompatActivity {
                     user_bindo3.setChecked(false);
                     user_bindo5.setChecked(false);
                     user_bindo4.setBackgroundResource(R.drawable.select_box);
+                    user_bindo4.setTextColor(Color.parseColor("#ffffff"));
                     user_bindo = "주4~5회";
                 } else {
                     user_bindo = "";
                     user_bindo4.setBackgroundResource(R.drawable.select_box);
+                    user_bindo4.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -104,10 +113,12 @@ public class Register2Activity extends AppCompatActivity {
                     user_bindo3.setChecked(false);
                     user_bindo4.setChecked(false);
                     user_bindo5.setBackgroundResource(R.drawable.select_box);
+                    user_bindo5.setTextColor(Color.parseColor("#ffffff"));
                     user_bindo = "매일";
                 } else {
                     user_bindo = "";
                     user_bindo5.setBackgroundResource(R.drawable.select_box);
+                    user_bindo5.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -125,10 +136,12 @@ public class Register2Activity extends AppCompatActivity {
                     user_duration3.setChecked(false);
                     user_duration4.setChecked(false);
                     user_duration1.setBackgroundResource(R.drawable.select_box);
+                    user_duration1.setTextColor(Color.parseColor("#ffffff"));
                     user_duration = "30분 이하";
                 } else {
                     user_duration = "";
                     user_duration1.setBackgroundResource(R.drawable.select_box);
+                    user_duration1.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -140,10 +153,12 @@ public class Register2Activity extends AppCompatActivity {
                     user_duration3.setChecked(false);
                     user_duration4.setChecked(false);
                     user_duration2.setBackgroundResource(R.drawable.select_box);
+                    user_duration2.setTextColor(Color.parseColor("#ffffff"));
                     user_duration = "30~60분";
                 } else {
                     user_duration = "";
                     user_duration2.setBackgroundResource(R.drawable.select_box);
+                    user_duration2.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -155,10 +170,12 @@ public class Register2Activity extends AppCompatActivity {
                     user_duration2.setChecked(false);
                     user_duration4.setChecked(false);
                     user_duration3.setBackgroundResource(R.drawable.select_box);
+                    user_duration3.setTextColor(Color.parseColor("#ffffff"));
                     user_duration = "1~2시간";
                 } else {
                     user_duration = "";
                     user_duration3.setBackgroundResource(R.drawable.select_box);
+                    user_duration3.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -170,10 +187,12 @@ public class Register2Activity extends AppCompatActivity {
                     user_duration3.setChecked(false);
                     user_duration1.setChecked(false);
                     user_duration4.setBackgroundResource(R.drawable.select_box);
+                    user_duration4.setTextColor(Color.parseColor("#ffffff"));
                     user_duration = "2시간 이상";
                 } else {
                     user_duration = "";
                     user_duration4.setBackgroundResource(R.drawable.select_box);
+                    user_duration4.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -190,10 +209,12 @@ public class Register2Activity extends AppCompatActivity {
                     user_with2.setChecked(false);
                     user_with3.setChecked(false);
                     user_with1.setBackgroundResource(R.drawable.select_box);
+                    user_with1.setTextColor(Color.parseColor("#ffffff"));
                     user_with = "혼자";
                 } else {
                     user_with = "";
                     user_with1.setBackgroundResource(R.drawable.select_box);
+                    user_with1.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -204,10 +225,12 @@ public class Register2Activity extends AppCompatActivity {
                     user_with1.setChecked(false);
                     user_with3.setChecked(false);
                     user_with2.setBackgroundResource(R.drawable.select_box);
+                    user_with2.setTextColor(Color.parseColor("#ffffff"));
                     user_with = "배우자(연인)과";
                 } else {
                     user_with = "";
                     user_with2.setBackgroundResource(R.drawable.select_box);
+                    user_with2.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -218,10 +241,12 @@ public class Register2Activity extends AppCompatActivity {
                     user_with1.setChecked(false);
                     user_with2.setChecked(false);
                     user_with3.setBackgroundResource(R.drawable.select_box);
+                    user_with3.setTextColor(Color.parseColor("#ffffff"));
                     user_with = "친구와";
                 } else {
                     user_with = "";
                     user_with3.setBackgroundResource(R.drawable.select_box);
+                    user_with3.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });

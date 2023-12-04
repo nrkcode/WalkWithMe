@@ -1,6 +1,7 @@
 package com.example.walkwithme;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -56,10 +57,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_place8.setChecked(false);
                     user_pref_place9.setChecked(false);
                     user_pref_place1.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place1.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_place = "공원";
                 } else {
                     user_pref_place = "";
                     user_pref_place1.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place1.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -76,10 +79,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_place8.setChecked(false);
                     user_pref_place9.setChecked(false);
                     user_pref_place2.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place2.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_place = "운동장";
                 } else {
                     user_pref_place = "";
                     user_pref_place2.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place2.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -96,10 +101,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_place8.setChecked(false);
                     user_pref_place9.setChecked(false);
                     user_pref_place3.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place3.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_place = "저수지";
                 } else {
                     user_pref_place = "";
                     user_pref_place3.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place3.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -116,10 +123,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_place8.setChecked(false);
                     user_pref_place9.setChecked(false);
                     user_pref_place4.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place4.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_place = "테마공원";
                 } else {
                     user_pref_place = "";
                     user_pref_place4.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place4.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -136,10 +145,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_place8.setChecked(false);
                     user_pref_place9.setChecked(false);
                     user_pref_place5.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place5.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_place = "자연공원";
                 } else {
                     user_pref_place = "";
                     user_pref_place5.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place5.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -156,10 +167,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_place8.setChecked(false);
                     user_pref_place9.setChecked(false);
                     user_pref_place6.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place6.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_place = "식물원";
                 } else {
                     user_pref_place = "";
                     user_pref_place6.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place6.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -176,10 +189,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_place8.setChecked(false);
                     user_pref_place9.setChecked(false);
                     user_pref_place7.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place7.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_place = "휴양림";
                 } else {
                     user_pref_place = "";
                     user_pref_place7.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place7.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -196,10 +211,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_place7.setChecked(false);
                     user_pref_place9.setChecked(false);
                     user_pref_place8.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place8.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_place = "저수지";
                 } else {
                     user_pref_place = "";
                     user_pref_place8.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place8.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -216,10 +233,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_place7.setChecked(false);
                     user_pref_place8.setChecked(false);
                     user_pref_place9.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place9.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_place = "유원지";
                 } else {
                     user_pref_place = "";
                     user_pref_place9.setBackgroundResource(R.drawable.select_box);
+                    user_pref_place9.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -243,10 +262,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_facility6.setChecked(false);
                     user_pref_facility7.setChecked(false);
                     user_pref_facility1.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility1.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_facility = "놀이터";
                 } else {
                     user_pref_facility = "";
                     user_pref_facility1.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility1.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -261,10 +282,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_facility6.setChecked(false);
                     user_pref_facility7.setChecked(false);
                     user_pref_facility2.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility2.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_facility = "바닥분수";
                 } else {
                     user_pref_facility = "";
                     user_pref_facility2.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility2.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -279,10 +302,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_facility6.setChecked(false);
                     user_pref_facility7.setChecked(false);
                     user_pref_facility3.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility3.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_facility = "도서관";
                 } else {
                     user_pref_facility = "";
                     user_pref_facility3.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility3.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -297,10 +322,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_facility6.setChecked(false);
                     user_pref_facility7.setChecked(false);
                     user_pref_facility4.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility4.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_facility = "화장실";
                 } else {
                     user_pref_facility = "";
                     user_pref_facility4.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility4.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -315,10 +342,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_facility6.setChecked(false);
                     user_pref_facility7.setChecked(false);
                     user_pref_facility5.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility5.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_facility = "주차장";
                 } else {
                     user_pref_facility = "";
                     user_pref_facility5.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility5.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -333,10 +362,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_facility5.setChecked(false);
                     user_pref_facility7.setChecked(false);
                     user_pref_facility6.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility6.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_facility = "경로당";
                 } else {
                     user_pref_facility = "";
                     user_pref_facility6.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility6.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
@@ -351,10 +382,12 @@ public class Register3Activity extends AppCompatActivity {
                     user_pref_facility5.setChecked(false);
                     user_pref_facility6.setChecked(false);
                     user_pref_facility7.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility7.setTextColor(Color.parseColor("#ffffff"));
                     user_pref_facility = "마을회관";
                 } else {
                     user_pref_facility = "";
                     user_pref_facility7.setBackgroundResource(R.drawable.select_box);
+                    user_pref_facility7.setTextColor(Color.parseColor("#000000"));
                 }
             }
         });
