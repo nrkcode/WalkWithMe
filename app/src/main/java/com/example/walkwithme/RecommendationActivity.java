@@ -37,6 +37,8 @@ import okhttp3.Response;
 
 import android.telecom.Call;
 import android.util.Log;
+import android.widget.Toast;
+
 import org.jetbrains.annotations.NotNull;
 import java.util.Objects;
 import okhttp3.*;
@@ -90,6 +92,7 @@ public class RecommendationActivity extends AppCompatActivity {
         recyclerView2.setLayoutManager(new LinearLayoutManager(this));
         placeAdapter = new PlaceAdapter();
         recyclerView2.setAdapter(placeAdapter);
+
     }
 
     private void requestLocation() {
@@ -215,6 +218,14 @@ public class RecommendationActivity extends AppCompatActivity {
             holder.categoryTextView.setText(place.getCategory());
             holder.distanceTextView.setText(place.getDistance());
 
+            //상세 화면 보기로 전환
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(holder.itemView.getContext(), WalkInfoActivity.class);
+                    ContextCompat.startActivity(holder.itemView.getContext(), intent, null);
+                }
+            });
 
         }
 
@@ -239,4 +250,5 @@ public class RecommendationActivity extends AppCompatActivity {
             }
         }
     }
+
 }
