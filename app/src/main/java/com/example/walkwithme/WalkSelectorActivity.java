@@ -1,14 +1,11 @@
 package com.example.walkwithme;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 public class WalkSelectorActivity extends AppCompatActivity {
 
@@ -22,8 +19,8 @@ public class WalkSelectorActivity extends AppCompatActivity {
         frame1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 프레임 레이아웃 클릭 시 산책 리스트 화면인 one.xml로 인텐트
-                Intent intent = new Intent(getApplicationContext(), one.class);
+                // 프레임 레이아웃 클릭 시 산책 리스트 화면인 activity_recommendation.xml로 인텐트
+                Intent intent = new Intent(getApplicationContext(), RecommendationActivity.class);
                 startActivity(intent);
             }
         });
