@@ -227,9 +227,11 @@ public class HomeActivity extends AppCompatActivity {
 
     private static class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHolder> {
         private List<Place> places = new ArrayList<>();
+        private static final int MAX_ITEMS = 3;
 
         public void setPlaces(List<Place> places) {
-            this.places = places;
+            // 최대 3개의 아이템만 유지
+            this.places = places.subList(0, Math.min(places.size(), MAX_ITEMS));
             notifyDataSetChanged();
         }
 
