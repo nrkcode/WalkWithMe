@@ -29,48 +29,34 @@
 
     <!-- 산책 시작하기 버튼 -->
     <Button
+        android:id="@+id/start_btn_f"
         android:layout_width="220dp"
         android:layout_height="46dp"
-        android:text="산책 시작하기"
+        android:text="      산책 시작하기"
         android:textSize="24dp"
         android:textColor="@color/white"
         android:letterSpacing="-0.025"
         android:fontFamily="@font/pretendard_semibold"
         android:paddingTop="0dp"
         android:paddingBottom="0dp"
-        android:drawableLeft="@drawable/start"
         android:background="#00ff0000"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginBottom="120dp"
         android:visibility="visible"/>
 
+
     <ImageView
+        android:id="@+id/start_img"
         android:layout_width="220dp"
         android:layout_height="46dp"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginBottom="120dp"
         android:src="@drawable/walk_start_box"
-        android:visibility="visible"/>
+        android:visibility="visible" />
 
-    <!-- 산책 타이머 -->
-    <Button
-        android:layout_width="172dp"
-        android:layout_height="46dp"
-        android:text="00:00:00"
-        android:textSize="24dp"
-        android:textColor="@color/theme2"
-        android:letterSpacing="-0.025"
-        android:fontFamily="@font/pretendard_semibold"
-        android:background="#00ff0000"
-        android:paddingTop="0dp"
-        android:paddingBottom="0dp"
-        android:drawableLeft="@drawable/pause"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="120dp"
-        android:layout_marginRight="36dp"
-        android:visibility="invisible"/>
 
     <ImageView
+        android:id="@+id/walk_img"
         android:layout_width="172dp"
         android:layout_height="46dp"
         android:layout_gravity="center_horizontal|bottom"
@@ -79,13 +65,65 @@
         android:layout_marginRight="36dp"
         android:visibility="invisible"/>
 
-    <!-- 산책 멈춤 버튼 -->
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="#00ff0000"
+    <!-- 산책 타이머 -->
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="172dp"
+        android:layout_height="46dp"
         android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="125dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="120dp"
+        android:background="#00ff0000"
+        android:fontFamily="@font/pretendard_semibold"
+        android:letterSpacing="-0.025"
+        android:paddingLeft="50dp"
+        android:paddingTop="5dp"
+
+        android:paddingBottom="0dp"
+        android:textColor="@color/theme2"
+        android:textSize="24dp"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/stop_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:drawableLeft="@drawable/start"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="128dp"
+        android:layout_marginRight="94dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/pause_new"
+        android:textColor="@color/theme2"
+
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/start_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:src="@drawable/start"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="128dp"
+        android:layout_marginRight="94dp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/theme2"
+
+        android:visibility="visible" />
+
+    <!-- 산책 멈춤 버튼 -->
+    <ImageButton
+        android:id="@+id/reset_btn"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="#00ff0000"
+        android:src="@drawable/walk_ended"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="120dp"
         android:layout_marginLeft="80dp"
         android:visibility="invisible"/>
 

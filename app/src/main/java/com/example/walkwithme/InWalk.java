@@ -8,6 +8,8 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.Manifest;
 import android.content.Intent;
@@ -57,10 +59,18 @@ import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapPointBounds;
 import net.daum.mf.map.api.MapPolyline;
 import net.daum.mf.map.api.MapView;
-
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.os.SystemClock;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Chronometer;
 public class InWalk extends AppCompatActivity implements MapView.CurrentLocationEventListener, MapView.MapViewEventListener {
     private MapView mapView;
     private ViewGroup mapViewContainer;
+    private Chronometer chronometer; //타이머 view
+    private boolean running; // 진행 중인지 확인하는 변수
+    private long pauseOffset; // 정지 오프셋
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +79,86 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        chronometer = findViewById(R.id.chronometer);
+        chronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener(){ // 시분초 표현
+            @Override
+            public void onChronometerTick(Chronometer cArg) {
+                long time = SystemClock.elapsedRealtime() - cArg.getBase();
+                int h   = (int)(time /3600000);
+                int m = (int)(time - h*3600000)/60000;
+                int s= (int)(time - h*3600000- m*60000)/1000 ;
+                String hh = h < 10 ? "0"+h: h+"";
+                String mm = m < 10 ? "0"+m: m+"";
+                String ss = s < 10 ? "0"+s: s+"";
+                cArg.setText(hh+":"+mm+":"+ss);
+            }
+        });
+        chronometer.setFormat("%s"); // 타이머 포멧 등록
+
+        Button startBtnf = findViewById(R.id.start_btn_f);
+        ImageButton startBtn = findViewById(R.id.start_btn);
+        ImageButton resetBtn = findViewById(R.id.reset_btn);
+        ImageView startImg = findViewById(R.id.start_img);
+        ImageButton stopBtn = findViewById(R.id.stop_btn);
+        ImageView walkImg = findViewById(R.id.walk_img);
+
+
+        startBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stopBtn.setVisibility(stopBtn.VISIBLE);
+                walkImg.setVisibility(walkImg.VISIBLE);
+                startBtn.setVisibility(startBtn.INVISIBLE);
+
+                if(!running){
+                    chronometer.setBase(SystemClock.elapsedRealtime() - pauseOffset);
+                    chronometer.start();
+                    running = true;
+                }
+            }
+        });
+        startBtnf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startBtnf.setVisibility(startBtnf.GONE);
+                startBtn.setVisibility(startBtn.GONE);
+                startImg.setVisibility(startImg.GONE);
+                chronometer.setVisibility(chronometer.VISIBLE);
+                stopBtn.setVisibility(stopBtn.VISIBLE);
+                walkImg.setVisibility(walkImg.VISIBLE);
+                resetBtn.setVisibility(resetBtn.VISIBLE);
+
+                if(!running){
+                    chronometer.setBase(SystemClock.elapsedRealtime() - pauseOffset);
+                    chronometer.start();
+                    running = true;
+                }
+            }
+        });
+
+        stopBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startBtn.setVisibility(startBtn.VISIBLE);
+                stopBtn.setVisibility(stopBtn.GONE);
+                if(running){
+                    chronometer.stop();
+                    pauseOffset = SystemClock.elapsedRealtime() - chronometer.getBase();
+                    running = false;
+                }
+            }
+        });
+        resetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chronometer.setBase(SystemClock.elapsedRealtime());
+                pauseOffset = 0;
+                chronometer.stop();
+                running = false;
+            }
+        });
+
 
         try {
             PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
