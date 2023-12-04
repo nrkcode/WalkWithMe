@@ -29,14 +29,205 @@
             android:layout_height="260dp"
             />
 
-        <!-- 이미지 -->
-        <ImageView
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/select_box"/>
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/select_box"/>
+
+            <!-- 내용 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <!-- 리스트1 이름 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/nameTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="전남대학교 용지"
+                           android:textSize="24dp"
+                            android:textColor="@color/bold"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:letterSpacing="-0.025" />
+
+                        <TextView
+                            android:id="@+id/categoryTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:textSize="16dp"
+                            android:text="저수지"
+                            android:textColor="@color/basic2"
+                            android:fontFamily="@font/pretendard_regular"
+                            android:letterSpacing="-0.025"
+                            android:layout_marginLeft="10dp"/>
+                    </LinearLayout>
+
+                    <!-- 추천 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="추천"
+                            android:textSize="14dp"
+                            android:textColor="@color/theme2"
+                            android:fontFamily="@font/pretendard_regular"
+                            android:letterSpacing="-0.025"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@drawable/thumb_up"
+                            android:layout_marginLeft="2dp"
+                            android:layout_gravity="center_vertical"
+                            app:tint="@color/theme2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 리스트1 주소 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/pin_drop"
+                        app:tint="@color/basic2"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/addressTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:text="광주 북구 용봉동 77"
+                        android:textSize="14dp"
+                        android:textColor="@color/basic2"
+                        android:layout_marginLeft="4dp"/>
+                </LinearLayout>
+
+                <!-- 리스트1 산책 세부기록 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/distanceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:text="1.5km"
+                        android:textSize="16dp"
+                        android:textColor="@color/basic1"
+                        android:fontFamily="@font/pretendard_medium"
+                        android:letterSpacing="-0.025"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/circle"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:text="30분"
+                        android:textSize="16dp"
+                        android:textColor="@color/basic1"
+                        android:fontFamily="@font/pretendard_medium"
+                        android:letterSpacing="-0.025"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/circle" />
+
+                    <TextView
+                        android:id="@+id/txt_kcal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:text="320kcal"
+                        android:textSize="16dp"
+                        android:textColor="@color/basic1"
+                        android:fontFamily="@font/pretendard_medium"
+                        android:letterSpacing="-0.025"/>
+                </LinearLayout>
+
+                <!-- 산책 시작 버튼 -->
+                <Button
+                    android:layout_width="124dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/theme2_box_16"
+                    android:layout_marginTop="14dp"
+                    android:layout_gravity="center"
+                    android:text="산책 시작"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/pretendard_semibold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:text="설명"
+                    android:textColor="@color/basic1"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:layout_marginLeft="12dp"
+                    android:letterSpacing="-0.025"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line"
+                    android:layout_marginTop="8dp"
+                    app:tint="@color/theme2"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="전남대학교 안에 인공 호수로 많은 사람들이 오가는 주요 명소 중 하나이다. 특히 봄엔 벚꽃나무, 가을엔 단풍나무의 풍경을 볼 수 있어
+사진 명소로 불린다. 저수지 이지만 걷기 좋은 길과 벤치들이 있어 쉽게 산책할 수 있다."
+                    android:textSize="14dp"
+                    android:textColor="@color/basic1"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:letterSpacing="-0.025"
+                    android:layout_marginTop="24dp"
+                    android:lineSpacingExtra="2dp"/>
 
 
+
+            </LinearLayout>
+        </FrameLayout>
     </LinearLayout>
-
-
 </FrameLayout>
