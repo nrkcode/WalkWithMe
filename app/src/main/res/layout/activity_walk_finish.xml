@@ -33,8 +33,7 @@
                 android:id="@+id/finish_label"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:text="산책 종료"
-                android:text="홍길동님을 위한 추천 산책코스"
+                android:text="산책 종료\n홍길동님을 위한 추천 산책코스"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:textSize="20dp"
@@ -65,4 +64,3 @@
     </LinearLayout>
 </LinearLayout>
 
-</LinearLayout>
