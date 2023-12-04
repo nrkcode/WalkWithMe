@@ -116,7 +116,8 @@
             android:layout_marginTop="6dp"
             android:orientation="horizontal">
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_pref_place1"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="60dp"
                 android:layout_height="30dp"
@@ -124,9 +125,13 @@
                 android:fontFamily="@font/pretendard_regular"
                 android:paddingHorizontal="16dp"
                 android:text="공원"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:checked="false"
+                android:textOff="공원"
+                android:textOn="공원"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_pref_place2"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
@@ -135,9 +140,13 @@
                 android:fontFamily="@font/pretendard_regular"
                 android:paddingHorizontal="16dp"
                 android:text="운동장"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:checked="false"
+                android:textOff="운동장"
+                android:textOn="운동장"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_pref_place3"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
@@ -146,9 +155,13 @@
                 android:fontFamily="@font/pretendard_regular"
                 android:padding="0dp"
                 android:text="저수지"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:checked="false"
+                android:textOff="저수지"
+                android:textOn="저수지"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_pref_place4"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
@@ -157,7 +170,10 @@
                 android:fontFamily="@font/pretendard_regular"
                 android:padding="0dp"
                 android:text="테마공원"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:checked="false"
+                android:textOff="테마공원"
+                android:textOn="테마공원"/>
 
         </LinearLayout>
 
@@ -167,7 +183,8 @@
             android:layout_marginTop="6dp"
             android:orientation="horizontal">
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_pref_place5"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
@@ -175,9 +192,13 @@
                 android:fontFamily="@font/pretendard_regular"
                 android:padding="0dp"
                 android:text="자연공원"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:checked="false"
+                android:textOff="자연공원"
+                android:textOn="자연공원"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_pref_place6"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
@@ -186,9 +207,13 @@
                 android:fontFamily="@font/pretendard_regular"
                 android:paddingHorizontal="16dp"
                 android:text="식물원"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:checked="false"
+                android:textOff="식물원"
+                android:textOn="식물원"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_pref_place7"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
@@ -197,7 +222,10 @@
                 android:fontFamily="@font/pretendard_regular"
                 android:padding="0dp"
                 android:text="휴양림"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:checked="false"
+                android:textOff="휴양림"
+                android:textOn="휴양림"/>
 
         </LinearLayout>
 
@@ -208,7 +236,8 @@
             android:orientation="horizontal">
 
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_pref_place8"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
@@ -216,9 +245,13 @@
                 android:fontFamily="@font/pretendard_regular"
                 android:paddingHorizontal="16dp"
                 android:text="저수지"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:checked="false"
+                android:textOff="저수지"
+                android:textOn="저수지"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_pref_place9"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
@@ -227,7 +260,10 @@
                 android:fontFamily="@font/pretendard_regular"
                 android:padding="0dp"
                 android:text="유원지"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:checked="false"
+                android:textOff="유원지"
+                android:textOn="유원지"/>
 
         </LinearLayout>
 
@@ -255,7 +291,8 @@
             android:layout_marginTop="6dp"
             android:orientation="horizontal">
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_pref_facility1"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -263,9 +300,13 @@
                 android:textSize="14dp"
                 android:background="@drawable/select_box"
                 android:paddingHorizontal="16dp"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="놀이터"
+                android:textOn="놀이터"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_pref_facility2"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -274,9 +315,13 @@
                 android:padding="0dp"
                 android:background="@drawable/select_box"
                 android:layout_marginLeft="8dp"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="바닥분수"
+                android:textOn="바닥분수"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_pref_facility3"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -285,8 +330,12 @@
                 android:padding="0dp"
                 android:background="@drawable/select_box"
                 android:layout_marginLeft="8dp"
-                style="?android:attr/borderlessButtonStyle"/>
-            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="도서관"
+                android:textOn="도서관"/>
+            <ToggleButton
+                android:id="@+id/user_pref_facility4"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -295,7 +344,10 @@
                 android:background="@drawable/select_box"
                 android:paddingHorizontal="16dp"
                 android:layout_marginLeft="8dp"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="화장실"
+                android:textOn="화장실"/>
 
         </LinearLayout>
         <LinearLayout
@@ -304,7 +356,8 @@
             android:layout_marginTop="6dp"
             android:orientation="horizontal">
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_pref_facility5"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -312,8 +365,12 @@
                 android:textSize="14dp"
                 android:padding="0dp"
                 android:background="@drawable/select_box"
-                style="?android:attr/borderlessButtonStyle"/>
-            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="주차장"
+                android:textOn="주차장"/>
+            <ToggleButton
+                android:id="@+id/user_pref_facility6"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -322,8 +379,12 @@
                 android:padding="0dp"
                 android:background="@drawable/select_box"
                 android:layout_marginLeft="8dp"
-                style="?android:attr/borderlessButtonStyle"/>
-            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="경로당"
+                android:textOn="경로당"/>
+            <ToggleButton
+                android:id="@+id/user_pref_facility7"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -332,7 +393,10 @@
                 android:padding="0dp"
                 android:background="@drawable/select_box"
                 android:layout_marginLeft="8dp"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="마을회관"
+                android:textOn="마을회관"/>
 
         </LinearLayout>
 

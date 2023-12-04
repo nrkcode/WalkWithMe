@@ -107,6 +107,7 @@
             android:textSize="24dp" />
 
         <EditText
+            android:id="@+id/user_name"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="@drawable/text_box"
@@ -126,6 +127,7 @@
             android:textSize="24dp" />
 
         <EditText
+            android:id="@+id/user_age"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="@drawable/text_box"
@@ -149,21 +151,27 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
+            <ToggleButton
+                android:id="@+id/maleButton"
                 android:layout_width="140dp"
                 android:layout_height="56dp"
                 android:background="@drawable/text_box"
                 android:fontFamily="@font/pretendard_semibold"
                 android:text="남"
                 android:textSize="22dp"
-                style="?android:attr/borderlessButtonStyle" />
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="남"
+                android:textOn="남"
+                />
 
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/femaleButton"
                 android:layout_width="140dp"
                 android:layout_height="56dp"
                 android:fontFamily="@font/pretendard_semibold"
@@ -171,7 +179,10 @@
                 android:textSize="20dp"
                 android:layout_gravity="right"
                 android:background="@drawable/text_box"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOn="여"
+                android:textOff="여"/>
 
         </LinearLayout>
 

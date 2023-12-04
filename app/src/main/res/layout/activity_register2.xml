@@ -115,17 +115,22 @@
             android:layout_marginTop="6dp"
             android:orientation="horizontal">
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_bindo1"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
+                android:background="@drawable/select_box"
                 android:fontFamily="@font/pretendard_regular"
+                android:paddingHorizontal="16dp"
                 android:text="거의 안함"
                 android:textSize="14dp"
-                android:paddingHorizontal="16dp"
-                android:background="@drawable/select_box"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:checked="false"
+                android:textOff="거의 안함"
+                android:textOn="거의 안함"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_bindo2"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -134,9 +139,13 @@
                 android:background="@drawable/select_box"
                 android:layout_marginLeft="8dp"
                 android:paddingHorizontal="16dp"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="주1~2회"
+                android:textOn="주1~2회"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_bindo3"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -145,7 +154,11 @@
                 android:padding="0dp"
                 android:background="@drawable/select_box"
                 android:layout_marginLeft="8dp"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="주3~4회"
+                android:textOn="주3~4회"
+                />
 
         </LinearLayout>
 
@@ -155,7 +168,8 @@
             android:layout_marginTop="6dp"
             android:orientation="horizontal">
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_bindo4"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -163,9 +177,13 @@
                 android:textSize="14dp"
                 android:padding="0dp"
                 android:background="@drawable/select_box"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="주4~5회"
+                android:textOn="주4~5회"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_bindo5"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -173,7 +191,10 @@
                 android:textSize="14dp"
                 android:background="@drawable/select_box"
                 android:layout_marginLeft="8dp"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="매일"
+                android:textOn="매일"/>
 
         </LinearLayout>
 
@@ -201,7 +222,8 @@
             android:layout_marginTop="6dp"
             android:orientation="horizontal">
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_duration1"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -209,9 +231,13 @@
                 android:textSize="14dp"
                 android:padding="0dp"
                 android:background="@drawable/select_box"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="30분 이하"
+                android:textOn="30분 이하"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_duration2"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -220,9 +246,13 @@
                 android:padding="0dp"
                 android:background="@drawable/select_box"
                 android:layout_marginLeft="8dp"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="30~60분"
+                android:textOn="30~60분"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_duration3"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -231,7 +261,10 @@
                 android:padding="0dp"
                 android:background="@drawable/select_box"
                 android:layout_marginLeft="8dp"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="1시간~2시간"
+                android:textOn="1시간~2시간"/>
 
         </LinearLayout>
 
@@ -241,7 +274,8 @@
             android:layout_marginTop="6dp"
             android:orientation="horizontal">
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_duration4"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -249,7 +283,10 @@
                 android:textSize="14dp"
                 android:padding="0dp"
                 android:background="@drawable/select_box"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="2시간 이상"
+                android:textOn="2시간 이상"/>
 
         </LinearLayout>
 
@@ -277,17 +314,22 @@
             android:layout_marginTop="6dp"
             android:orientation="horizontal">
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_with1"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
+                android:background="@drawable/select_box"
                 android:fontFamily="@font/pretendard_regular"
+                android:padding="0dp"
                 android:text="혼자"
                 android:textSize="14dp"
-                android:padding="0dp"
-                android:background="@drawable/select_box"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:checked="false"
+                android:textOff="혼자"
+                android:textOn="혼자"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_with2"
                 android:layout_width="120dp"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -297,9 +339,13 @@
                 android:gravity="center"
                 android:background="@drawable/select_box"
                 android:layout_marginLeft="8dp"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="배우자(연인)과"
+                android:textOn="배우자(연인)과"/>
 
-            <Button
+            <ToggleButton
+                android:id="@+id/user_with3"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:fontFamily="@font/pretendard_regular"
@@ -308,7 +354,10 @@
                 android:padding="0dp"
                 android:background="@drawable/select_box"
                 android:layout_marginLeft="8dp"
-                style="?android:attr/borderlessButtonStyle"/>
+                style="?android:attr/borderlessButtonStyle"
+                android:checked="false"
+                android:textOff="친구와"
+                android:textOn="친구와"/>
 
         </LinearLayout>
 
