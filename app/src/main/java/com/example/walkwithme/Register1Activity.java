@@ -69,6 +69,7 @@ public class Register1Activity extends AppCompatActivity {
                 intent.putExtra("user_age", user_age.getText().toString());
                 intent.putExtra("user_gender", user_gender);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_right_enter, R.anim.slide_right_exit);
             }
         });
 
@@ -78,6 +79,7 @@ public class Register1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), IntroActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_left_enter, R.anim.slide_left_exit);
             }
         });
 

@@ -92,6 +92,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), WalkSelectorActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_right_enter, R.anim.slide_right_exit);
             }
         });
 

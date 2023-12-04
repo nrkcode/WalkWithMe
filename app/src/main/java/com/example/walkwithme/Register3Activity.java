@@ -411,6 +411,7 @@ public class Register3Activity extends AppCompatActivity {
                 intent.putExtra("user_age", user_age);
                 intent.putExtra("user_gender", user_gender);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_left_enter, R.anim.slide_left_exit);
             }
         });
 
@@ -419,8 +420,8 @@ public class Register3Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Register4Activity.class);
                 new RegisterUserTask().execute(user_name,user_gender,user_age,user_bindo,user_duration,user_with,user_pref_place,user_pref_facility);
-
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_right_enter, R.anim.slide_right_exit);
             }
         });
 

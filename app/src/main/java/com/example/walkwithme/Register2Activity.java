@@ -268,6 +268,7 @@ public class Register2Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Register1Activity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_left_enter, R.anim.slide_left_exit);
             }
         });
 
@@ -283,8 +284,8 @@ public class Register2Activity extends AppCompatActivity {
                 intent.putExtra("user_bindo", user_bindo);
                 intent.putExtra("user_duration", user_duration);
                 intent.putExtra("user_with", user_with);
-
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_right_enter, R.anim.slide_right_exit);
             }
         });
 
