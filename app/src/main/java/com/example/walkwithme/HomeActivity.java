@@ -131,7 +131,9 @@ public class HomeActivity extends AppCompatActivity {
             TextView lenTextView = (TextView) findViewById(R.id.walk_len);
             TextView hourTextView = (TextView) findViewById(R.id.walk_hour);
             TextView caloryTextView = (TextView) findViewById(R.id.waste_calory);
-            DataProcessor.processJsonData(result, nameTextView, lenTextView, hourTextView, caloryTextView);
+            TextView usernameTextView = (TextView) findViewById(R.id.user_name);
+            TextView stepTextView = (TextView) findViewById(R.id.current_step);
+            DataProcessor.processJsonData(result, nameTextView, lenTextView, hourTextView, caloryTextView, usernameTextView, stepTextView);
         }
     }
     private void requestLocation() {

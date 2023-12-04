@@ -18,6 +18,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp">
     <TextView
+        android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:text="안녕하세요! 홍길동님"
@@ -72,6 +73,7 @@
             android:layout_marginTop="18dp"/>
 
         <TextView
+            android:id="@+id/current_step"
             android:layout_width="92dp"
             android:layout_height="30dp"
             android:text="4,908"
