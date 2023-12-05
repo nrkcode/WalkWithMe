@@ -370,9 +370,13 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
         // 네 버튼
         dilaog01.findViewById(R.id.yesBtn).setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
                 // 원하는 기능 구현
                 Intent intent = new Intent(getApplicationContext(), walkFinishActivity.class);
+                intent.putExtra("currentSteps", currentSteps);
+                intent.putExtra("current_distance", current_distance);
+                intent.putExtra("currentKcal", currentKcal);
                 startActivity(intent);
             }
         });
