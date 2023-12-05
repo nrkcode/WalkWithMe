@@ -112,7 +112,7 @@
             android:layout_height="56dp"
             android:background="@drawable/text_box"
             android:fontFamily="@font/pretendard_medium"
-            android:hint="전대 최고 귀요미 김승현"
+            android:hint="홍길동"
             android:paddingLeft="16dp"
             android:textColorHint="@color/hint"
             android:textSize="18dp" />

@@ -32,14 +32,16 @@
         android:id="@+id/start_btn_f"
         android:layout_width="220dp"
         android:layout_height="46dp"
-        android:text="      산책 시작하기"
+        android:text="산책 시작하기"
         android:textSize="24dp"
         android:textColor="@color/white"
+        android:drawableLeft="@drawable/start"
         android:letterSpacing="-0.025"
         android:fontFamily="@font/pretendard_semibold"
         android:paddingTop="0dp"
         android:paddingBottom="0dp"
         android:background="#00ff0000"
+        android:paddingLeft="12dp"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginBottom="120dp"
         android:visibility="visible"/>
@@ -90,14 +92,13 @@
         android:layout_height="30dp"
         android:paddingTop="0dp"
         android:paddingBottom="0dp"
-        android:drawableLeft="@drawable/start"
+        android:drawableLeft="@drawable/start_theme2"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginBottom="128dp"
         android:layout_marginRight="94dp"
         android:background="@android:color/transparent"
         android:src="@drawable/pause_new"
         android:textColor="@color/theme2"
-
         android:visibility="invisible" />
 
     <ImageButton
@@ -106,14 +107,14 @@
         android:layout_height="30dp"
         android:paddingTop="0dp"
         android:paddingBottom="0dp"
-        android:src="@drawable/start"
+        android:src="@drawable/start_theme2"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginBottom="128dp"
         android:layout_marginRight="94dp"
         android:background="@android:color/transparent"
         android:textColor="@color/theme2"
 
-        android:visibility="visible" />
+        android:visibility="invisible" />
 
     <!-- 산책 멈춤 버튼 -->
     <ImageButton
@@ -152,6 +153,7 @@
             android:src="@drawable/record"
             android:layout_marginBottom="14dp"
             />
+
 
         <LinearLayout
             android:layout_width="90dp"
@@ -192,6 +194,11 @@
                 android:layout_gravity="center_horizontal"/>
 
         </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
         <!-- 걸은 거리 -->
         <ImageView
@@ -242,6 +249,11 @@
                 android:layout_gravity="center_horizontal"/>
 
         </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
         <!-- 소모 열량 -->
         <ImageView
