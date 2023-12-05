@@ -1,25 +1,23 @@
 package com.example.walkwithme;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.Signature;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
-import android.widget.FrameLayout;
+import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import android.os.Build.VERSION;
@@ -27,61 +25,24 @@ import android.os.Build.VERSION;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.List;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import net.daum.mf.map.api.CameraUpdateFactory;
-import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPoint;
-import net.daum.mf.map.api.MapPointBounds;
-import net.daum.mf.map.api.MapPolyline;
 import net.daum.mf.map.api.MapView;
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
+
 import android.os.SystemClock;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
-import android.Manifest;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.os.Build;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class InWalk extends AppCompatActivity implements MapView.CurrentLocationEventListener, MapView.MapViewEventListener, SensorEventListener {
     private MapView mapView;
@@ -94,6 +55,8 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
     TextView stepCountView;
     TextView walkDistance;
     TextView kcalCountView;
+
+    Dialog dilaog01; // 커스텀 다이얼로그
 
     int currentSteps = 0;//현재 걸음수
     double current_distance = 0;//현재 걸은거리
@@ -111,6 +74,11 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
         stepCountView = findViewById(R.id.stepCountView);
         walkDistance = findViewById(R.id.walkDistance);
         kcalCountView = findViewById(R.id.kcalCountView);
+
+        dilaog01 = new Dialog(InWalk.this);       // Dialog 초기화
+        dilaog01.requestWindowFeature(Window.FEATURE_NO_TITLE); // 타이틀 제거
+        dilaog01.setContentView(R.layout.activity_finish_window);             // xml 레이아웃 파일과 연결
+
 
         // 활동 퍼미션 체크 (만보기쪽)
         if(ContextCompat.checkSelfPermission(this,
@@ -210,6 +178,8 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
                 pauseOffset = 0;
                 chronometer.stop();
                 running = false;
+
+                showDialog01(); // 아래 showDialog01() 함수 호출
             }
         });
 
@@ -377,6 +347,36 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
 
     }
 
+    // dialog01을 디자인하는 함수
+    public void showDialog01(){
+        dilaog01.show(); // 다이얼로그 띄우기
+        dilaog01.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // 투명 배경
+        /* 이 함수 안에 원하는 디자인과 기능을 구현하면 된다. */
+
+        // 위젯 연결 방식은 각자 취향대로~
+        // '아래 아니오 버튼'처럼 일반적인 방법대로 연결하면 재사용에 용이하고,
+        // '아래 네 버튼'처럼 바로 연결하면 일회성으로 사용하기 편함.
+        // *주의할 점: findViewById()를 쓸 때는 -> 앞에 반드시 다이얼로그 이름을 붙여야 한다.
+
+        // 아니오 버튼
+        Button noBtn = dilaog01.findViewById(R.id.noBtn);
+        noBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 원하는 기능 구현
+                dilaog01.dismiss(); // 다이얼로그 닫기
+            }
+        });
+        // 네 버튼
+        dilaog01.findViewById(R.id.yesBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 원하는 기능 구현
+                Intent intent = new Intent(getApplicationContext(), walkFinishActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
