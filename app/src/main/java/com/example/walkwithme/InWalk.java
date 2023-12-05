@@ -64,6 +64,9 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
     TextView kcalCountView;
     private List<MapPoint> pathPoints;
 
+    private double selectedPlaceX; // 변수 추가
+    private double selectedPlaceY; // 변수 추가
+
     Dialog dilaog01; // 커스텀 다이얼로그
 
     private int currentSteps = 0;//현재 걸음수
@@ -71,6 +74,8 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
     private double currentKcal = 0;//현재 소모 칼로리
 
     private String timeee = "";
+
+    String selectedPlaceName;  // 이 부분을 추가해주세요
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
@@ -80,6 +85,22 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            // Intent로 전달된 데이터를 받아옴
+            // 여기서 String selectedPlaceName = intent.getStringExtra("name");로 선언함
+            String selectedPlaceName = intent.getStringExtra("name");
+            String selectedPlaceCategory = intent.getStringExtra("category");
+            selectedPlaceX = intent.getDoubleExtra("x", 0.0); // 변수 사용
+            selectedPlaceY = intent.getDoubleExtra("y", 0.0); // 변수 사용
+
+            // 여기서 selectedPlaceX, selectedPlaceY 값을 사용하여 작업 수행
+            // 예: MapPoint.mapPointWithGeoCoord(selectedPlaceX, selectedPlaceY);
+        }
+
+        // 나머지 코드 계속 진행...
 
         stepCountView = findViewById(R.id.stepCountView);
         walkDistance = findViewById(R.id.walkDistance);
@@ -235,10 +256,9 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
 
         pathPoints = new ArrayList<>();
 
-        // Custom Marker
         MapPOIItem customMarker = new MapPOIItem();
-        MapPoint mapPoint = MapPoint.mapPointWithGeoCoord(37.480426, 126.900177);
-        customMarker.setItemName("우리집 근처");
+        MapPoint mapPoint = MapPoint.mapPointWithGeoCoord(selectedPlaceX, selectedPlaceY);
+        customMarker.setItemName(selectedPlaceName);
         customMarker.setTag(1);
         customMarker.setMapPoint(mapPoint);
         customMarker.setMarkerType(MapPOIItem.MarkerType.CustomImage);

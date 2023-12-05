@@ -89,7 +89,22 @@ public class WalkInfoActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // 선택된 장소의 이름, 카테고리, x, y 값을 가져온다고 가정
+                String selectedPlaceName = placeAdapter.getPlaceName(0); // 예시로 첫 번째 장소를 가져오도록 설정
+                String selectedPlaceCategory = ""; // 여기에 해당하는 카테고리를 가져오도록 설정
+                String selectedPlaceX = ""; // 여기에 해당하는 x 좌표를 가져오도록 설정
+                String selectedPlaceY = ""; // 여기에 해당하는 y 좌표를 가져오도록 설정ㅑ
+
+                // InWalk 액티비티로 데이터를 전달하는 Intent 생성
                 Intent intent = new Intent(getApplicationContext(), InWalk.class);
+                intent.putExtra("name", selectedPlaceName);
+                intent.putExtra("category", selectedPlaceCategory);
+                intent.putExtra("x", selectedPlaceX);
+                intent.putExtra("y", selectedPlaceY);
+
+
+
+                // InWalk 액티비티 시작
                 startActivity(intent);
             }
         });
@@ -115,6 +130,8 @@ public class WalkInfoActivity extends AppCompatActivity {
         recyclerView3.setLayoutManager(new LinearLayoutManager(this));
         placeAdapter = new PlaceAdapter();
         recyclerView3.setAdapter(placeAdapter);
+
+
 
     }
 

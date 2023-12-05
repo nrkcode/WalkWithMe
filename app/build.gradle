@@ -35,6 +35,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation fileTree(dir: 'src\\main\\jniLibs', include: ['*.aar', '*.jar'], exclude: [])
     implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
     testImplementation 'junit:junit:4.13.2'
     implementation 'com.squareup.okhttp3:okhttp:4.9.2'
     implementation group: 'com.squareup.okhttp', name: 'okhttp', version: '2.7.5'

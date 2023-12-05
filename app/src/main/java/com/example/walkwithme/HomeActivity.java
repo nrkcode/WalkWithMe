@@ -294,6 +294,9 @@ public class HomeActivity extends AppCompatActivity {
             TextView addressTextView;
             TextView categoryTextView;
             TextView distanceTextView;
+            TextView longTextView;
+            TextView latiTextView;
+
 
             public PlaceViewHolder(@NonNull View itemView) {
                 super(itemView);
@@ -301,6 +304,10 @@ public class HomeActivity extends AppCompatActivity {
                 addressTextView = itemView.findViewById(R.id.addressTextView);
                 categoryTextView = itemView.findViewById(R.id.categoryTextView);
                 distanceTextView = itemView.findViewById(R.id.distanceTextView);
+                longTextView = itemView.findViewById(R.id.longTextView);
+                latiTextView = itemView.findViewById(R.id.latiTextView);
+
+
 
             }
         }

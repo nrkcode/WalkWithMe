@@ -177,5 +177,16 @@
         android:layout_height="wrap_content"
         android:src="@drawable/line"
         />
-
+    <TextView
+        android:id="@+id/longTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="12dp"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/latiTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="12dp"
+        android:visibility="gone"/>
 </LinearLayout>

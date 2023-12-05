@@ -154,9 +154,12 @@ public class RecommendationActivity extends AppCompatActivity {
                 String placeAddress = placeObject.getString("road_address_name");
                 String placeCategory = placeObject.getString("category_name");
                 String placeDistance = placeObject.getString("distance");
+                String placelongitude = placeObject.getString("x");
+                String placelatitude = placeObject.getString("y");
 
 
-                places.add(new Place(placeName, placeAddress,placeCategory,placeDistance));
+
+                places.add(new Place(placeName, placeAddress,placeCategory,placeDistance,placelongitude,placelatitude));
             }
 
             runOnUiThread(() -> placeAdapter.setPlaces(places));
@@ -170,13 +173,17 @@ public class RecommendationActivity extends AppCompatActivity {
         private final String address;
         private final String category;
         private final String distance;
+        private final String lon;
+        private final String lat;
 
 
-        public Place(String name, String address, String category, String distance) {
+        public Place(String name, String address, String category, String distance,String lon,String lat) {
             this.name = name;
             this.address = address;
             this.category = category;
             this.distance = distance;
+            this.lon=lon;
+            this.lat=lat;
 
         }
 
@@ -191,6 +198,10 @@ public class RecommendationActivity extends AppCompatActivity {
         public String getDistance() {
             return distance+"m";
         }
+        public String getLon() {return lon;}
+
+        public String getLat() {return lat;}
+
 
 
     }
@@ -217,6 +228,10 @@ public class RecommendationActivity extends AppCompatActivity {
             holder.addressTextView.setText(place.getAddress());
             holder.categoryTextView.setText(place.getCategory());
             holder.distanceTextView.setText(place.getDistance());
+            holder.longTextView.setText(place.getLat());
+            holder.latiTextView.setText(place.getLon());
+
+
 
             // 각 아이템에 대한 OnClickListener 설정
             holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -237,13 +252,18 @@ public class RecommendationActivity extends AppCompatActivity {
             TextView addressTextView;
             TextView categoryTextView;
             TextView distanceTextView;
-
+            TextView longTextView;
+            TextView latiTextView;
             public PlaceViewHolder(@NonNull View itemView) {
                 super(itemView);
                 nameTextView = itemView.findViewById(R.id.nameTextView);
                 addressTextView = itemView.findViewById(R.id.addressTextView);
                 categoryTextView = itemView.findViewById(R.id.categoryTextView);
                 distanceTextView = itemView.findViewById(R.id.distanceTextView);
+                longTextView = itemView.findViewById(R.id.longTextView);
+                latiTextView = itemView.findViewById(R.id.latiTextView);
+
+
             }
         }
     }
@@ -253,6 +273,9 @@ public class RecommendationActivity extends AppCompatActivity {
         intent.putExtra("category", place.getCategory());
         intent.putExtra("address", place.getAddress());
         intent.putExtra("distance", place.getDistance());
+        intent.putExtra("x", place.getLon());
+        intent.putExtra("y", place.getLat());
+
         startActivity(intent);
     }
 

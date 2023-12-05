@@ -160,6 +160,18 @@
                         android:textColor="@color/basic1"
                         android:fontFamily="@font/pretendard_medium"
                         android:letterSpacing="-0.025"/>
+                    <TextView
+                        android:id="@+id/longTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:textSize="12dp"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/latiTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:textSize="12dp"
+                        android:visibility="gone"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
