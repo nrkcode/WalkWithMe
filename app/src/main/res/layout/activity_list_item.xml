@@ -16,7 +16,8 @@
         <ImageView
             android:id="@+id/img_pic"
             android:layout_width="80dp"
-            android:layout_height="80dp"/>
+            android:layout_height="80dp"
+            android:src="@drawable/rectangle_40"/>
 
         <!-- 리스트 1 -->
         <LinearLayout
