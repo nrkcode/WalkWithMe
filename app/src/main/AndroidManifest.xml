@@ -50,4 +50,5 @@
         <activity android:name=".walkFinishActivity"/>
     </application>
 
+
 </manifest>
