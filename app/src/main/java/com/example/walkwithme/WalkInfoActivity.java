@@ -101,15 +101,23 @@ public class WalkInfoActivity extends AppCompatActivity {
         //위부터recycler
 
         //텍스트 데이터 가져오기
-        TextView textName = (TextView) findViewById(R.id.nameTextView);
-        TextView textAdr = (TextView) findViewById(R.id.addressTextView);
-        TextView textCate = (TextView) findViewById(R.id.categoryTextView);
-        TextView textDis = (TextView) findViewById(R.id.distanceTextView);
+        TextView textName = findViewById(R.id.nameTextView);
+        TextView textAdr = findViewById(R.id.addressTextView);
+        TextView textCate = findViewById(R.id.categoryTextView);
+        TextView textDis = findViewById(R.id.distanceTextView);
 
-        textName.setText("WHAT");
-        textAdr.setText("THE");
-        textCate.setText("FUck");
-        textDis.setText("!!!");
+        String Name = textName.getText().toString();
+        String Adr = textAdr.getText().toString();
+        String Cate = textCate.getText().toString();
+        String Dis = textDis.getText().toString();
+
+
+        Place p = new Place(Name, Adr, Cate, Dis);
+
+        textName.setText(p.getName());
+        textAdr.setText(p.getAddress());
+        textCate.setText(p.getCategory());
+        textDis.setText(p.getDistance());
         //여기에 가져오기만 하면 될거같은데 모다겠다
 
     }
