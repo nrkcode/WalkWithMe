@@ -29,8 +29,14 @@ import androidx.core.content.ContextCompat;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.List;
 
+import net.daum.mf.map.api.CameraUpdateFactory;
+import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPoint;
+import net.daum.mf.map.api.MapPointBounds;
+import net.daum.mf.map.api.MapPolyline;
 import net.daum.mf.map.api.MapView;
 
 import android.os.SystemClock;
@@ -55,6 +61,7 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
     TextView stepCountView;
     TextView walkDistance;
     TextView kcalCountView;
+    private List<MapPoint> pathPoints;
 
     Dialog dilaog01; // 커스텀 다이얼로그
 
@@ -90,7 +97,7 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         stepCountSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
 
-    // 걸음 센서 연결
+        // 걸음 센서 연결
         // * 옵션
         // - TYPE_STEP_DETECTOR:  리턴 값이 무조건 1, 앱이 종료되면 다시 0부터 시작
         // - TYPE_STEP_COUNTER : 앱 종료와 관계없이 계속 기존의 값을 가지고 있다가 1씩 증가한 값을 리턴
@@ -197,21 +204,12 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
             e.printStackTrace();
         }
 
-        // 권한ID를 가져옵니다
-        int permission = ContextCompat.checkSelfPermission(this,
-                Manifest.permission.INTERNET);
+        int internetPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET);
+        int fineLocationPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
+        int coarseLocationPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
 
-        int permission2 = ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION);
-
-        int permission3 = ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_COARSE_LOCATION);
-
-        // 권한이 열려있는지 확인
-        if (permission == PackageManager.PERMISSION_DENIED || permission2 == PackageManager.PERMISSION_DENIED || permission3 == PackageManager.PERMISSION_DENIED) {
-            // 마쉬멜로우 이상버전부터 권한을 물어본다
-            if (VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                // 권한 체크(READ_PHONE_STATE의 requestCode를 1000으로 세팅
+        if (internetPermission == PackageManager.PERMISSION_DENIED || fineLocationPermission == PackageManager.PERMISSION_DENIED || coarseLocationPermission == PackageManager.PERMISSION_DENIED) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 requestPermissions(
                         new String[]{Manifest.permission.INTERNET, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},
                         1000);
@@ -225,8 +223,36 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
         mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
         mapViewContainer.addView(mapView);
         mapView.setMapViewEventListener(this);
+        mapView.setCurrentLocationEventListener(this);
         mapView.setCurrentLocationTrackingMode(MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading);
 
+        pathPoints = new ArrayList<>();
+
+        // Custom Marker
+        MapPOIItem customMarker = new MapPOIItem();
+        MapPoint mapPoint = MapPoint.mapPointWithGeoCoord(37.480426, 126.900177);
+        customMarker.setItemName("우리집 근처");
+        customMarker.setTag(1);
+        customMarker.setMapPoint(mapPoint);
+        customMarker.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+        customMarker.setCustomImageResourceId(R.drawable.custom_marker_red);
+        customMarker.setCustomImageAutoscale(false);
+        customMarker.setCustomImageAnchor(0.5f, 1.0f);
+        mapView.addPOIItem(customMarker);
+
+        // 폴리라인 그리기
+        MapPolyline polyline = new MapPolyline();
+        polyline.setTag(1000);
+        polyline.setLineColor(0xFFFF3300); // Color.argb(128, 255, 51, 0);
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.479928, 126.900169));
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.480624, 126.900735));
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.481667, 126.900713));
+        mapView.addPolyline(polyline);
+
+        // 지도뷰의 중심좌표와 줌레벨을 Polyline이 모두 나오도록 조정
+        MapPointBounds mapPointBounds = new MapPointBounds(polyline.getMapPoints());
+        int padding = 100; // px
+        mapView.moveCamera(CameraUpdateFactory.newMapPointBounds(mapPointBounds, padding));
     }
 
     // 권한 체크 이후로직
@@ -255,6 +281,8 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
     @Override
     public void onCurrentLocationUpdate(MapView mapView, MapPoint mapPoint, float v) {
         // 현재 위치 업데이트 시 호출되는 메소드
+        pathPoints.add(mapPoint);
+        drawPath();
     }
 
     @Override
@@ -385,6 +413,27 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
+    }
+
+    private void drawPath() {
+        if (pathPoints.size() < 2) {
+            return;
+        }
+
+        MapPolyline polyline = new MapPolyline();
+        polyline.setTag(1000);
+        polyline.setLineColor(0xFFFF3300); // Color.argb(128, 255, 51, 0);
+
+        for (MapPoint point : pathPoints) {
+            polyline.addPoint(point);
+        }
+
+        mapView.addPolyline(polyline);
+
+        // 중심좌표와 줌레벨을 Polyline이 모두 나오도록 조정
+        MapPointBounds mapPointBounds = new MapPointBounds(polyline.getMapPoints());
+        int padding = 100; // px
+        mapView.moveCamera(CameraUpdateFactory.newMapPointBounds(mapPointBounds, padding));
     }
 
 }
