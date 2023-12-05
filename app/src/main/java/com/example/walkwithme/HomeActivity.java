@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -262,15 +263,25 @@ public class HomeActivity extends AppCompatActivity {
             holder.categoryTextView.setText(place.getCategory());
             holder.distanceTextView.setText(place.getDistance());
 
-            //상세 화면 보기로 전환
+            // 각각의 아이템에 대한 OnClickListener 설정
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(holder.itemView.getContext(), WalkInfoActivity.class);
-                    ContextCompat.startActivity(holder.itemView.getContext(), intent, null);
+                    // 각 아이템에 대한 정보를 가져오기
+                    String name = place.getName();
+                    String address = place.getAddress();
+                    String category = place.getCategory();
+                    String distance = place.getDistance();
+
+                    // 인텐트를 통해 새 화면으로 이동
+                    Intent intent = new Intent(view.getContext(), WalkInfoActivity.class);
+                    intent.putExtra("name", place.getName());
+                    intent.putExtra("category", place.getCategory());
+                    intent.putExtra("address", place.getAddress());
+                    intent.putExtra("distance", place.getDistance());
+                    view.getContext().startActivity(intent);
                 }
             });
-
         }
 
         @Override

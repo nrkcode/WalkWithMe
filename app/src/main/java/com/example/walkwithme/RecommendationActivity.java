@@ -195,7 +195,7 @@ public class RecommendationActivity extends AppCompatActivity {
 
     }
 
-    private static class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHolder> {
+    private class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHolder> {
         private List<Place> places = new ArrayList<>();
 
         public void setPlaces(List<Place> places) {
@@ -218,15 +218,13 @@ public class RecommendationActivity extends AppCompatActivity {
             holder.categoryTextView.setText(place.getCategory());
             holder.distanceTextView.setText(place.getDistance());
 
-            //상세 화면 보기로 전환
+            // 각 아이템에 대한 OnClickListener 설정
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(holder.itemView.getContext(), WalkInfoActivity.class);
-                    ContextCompat.startActivity(holder.itemView.getContext(), intent, null);
+                    handleItemClick(place);
                 }
             });
-
         }
 
         @Override
@@ -234,7 +232,7 @@ public class RecommendationActivity extends AppCompatActivity {
             return places.size();
         }
 
-        public static class PlaceViewHolder extends RecyclerView.ViewHolder {
+        public class PlaceViewHolder extends RecyclerView.ViewHolder {
             TextView nameTextView;
             TextView addressTextView;
             TextView categoryTextView;
@@ -246,9 +244,16 @@ public class RecommendationActivity extends AppCompatActivity {
                 addressTextView = itemView.findViewById(R.id.addressTextView);
                 categoryTextView = itemView.findViewById(R.id.categoryTextView);
                 distanceTextView = itemView.findViewById(R.id.distanceTextView);
-
             }
         }
+    }
+    private void handleItemClick(Place place) {
+        Intent intent = new Intent(RecommendationActivity.this, WalkInfoActivity.class);
+        intent.putExtra("name", place.getName());
+        intent.putExtra("category", place.getCategory());
+        intent.putExtra("address", place.getAddress());
+        intent.putExtra("distance", place.getDistance());
+        startActivity(intent);
     }
 
 }
