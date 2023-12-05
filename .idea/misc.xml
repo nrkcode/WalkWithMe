@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../WalkWithMe/app/src/main/res/layout/activity_register3.xml" value="0.15520833333333334" />
+        <entry key="../WalkWithMe/app/src/main/res/layout/activity_walk_finish.xml" value="0.335" />
         <entry key="..\:/Users/Home/AndroidStudioProjects/Walkwithme/app/src/main/res/drawable-v24/home_steps_box.xml" value="0.4395" />
         <entry key="..\:/Users/Home/AndroidStudioProjects/Walkwithme/app/src/main/res/drawable/circle.xml" value="0.4395" />
         <entry key="..\:/Users/Home/AndroidStudioProjects/Walkwithme/app/src/main/res/drawable/menu_item_color.xml" value="0.4395" />
@@ -44,29 +46,12 @@
         <entry key="..\:/Users/Home/AndroidStudioProjects/wwm/WalkWithMe/app/src/main/res/layout/activity_walk_selector.xml" value="0.5" />
         <entry key="..\:/Users/Home/AndroidStudioProjects/wwm/WalkWithMe/app/src/main/res/layout/one.xml" value="0.5536458333333333" />
         <entry key="..\:/Users/Home/AndroidStudioProjects/wwm/WalkWithMe/app/src/main/res/menu/menu.xml" value="0.5536458333333333" />
-<<<<<<< Updated upstream
-=======
-        <entry key="..\:/Users/User/AndroidStudioProjects/hksh/WalkWithMe/app/src/main/res/drawable-v24/select_box.xml" value="0.17" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/hksh/WalkWithMe/app/src/main/res/drawable-v24/text_box.xml" value="0.17" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/hksh/WalkWithMe/app/src/main/res/drawable-v24/toggle_button_selector.xml" value="0.2495" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/hksh/WalkWithMe/app/src/main/res/layout/activity_home.xml" value="0.21197916666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/hksh/WalkWithMe/app/src/main/res/layout/activity_intro.xml" value="0.21197916666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/hksh/WalkWithMe/app/src/main/res/layout/activity_list_item.xml" value="0.21197916666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/hksh/WalkWithMe/app/src/main/res/layout/activity_recommendation.xml" value="0.21197916666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/hksh/WalkWithMe/app/src/main/res/layout/activity_register1.xml" value="0.26614583333333336" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/hksh/WalkWithMe/app/src/main/res/layout/activity_register2.xml" value="0.26614583333333336" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/hksh/WalkWithMe/app/src/main/res/layout/activity_register3.xml" value="0.25" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/hksh/WalkWithMe/app/src/main/res/layout/activity_walk.xml" value="0.21197916666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/hksh/WalkWithMe/app/src/main/res/layout/activity_walk_info.xml" value="0.21197916666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/hksh/WalkWithMe/app/src/main/res/layout/activity_walk_selector.xml" value="0.21197916666666666" />
->>>>>>> Stashed changes
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/drawable-v24/walk_bg_bar.xml" value="0.174" />
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/drawable-v24/walk_bg_box.xml" value="0.174" />
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/drawable-v24/walk_start_box.xml" value="0.174" />
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/drawable/confirm_radius.xml" value="0.174" />
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/drawable/radius.xml" value="0.174" />
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/drawable/shape_for_circle_button_ksh.xml" value="0.174" />
-<<<<<<< Updated upstream
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/drawable/walk_finish_box.xml" value="0.174" />
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/activity_detail.xml" value="0.1" />
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/activity_finish_window.xml" value="0.3333333333333333" />
@@ -80,10 +65,7 @@
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/dailog01.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/item_place.xml" value="0.18333333333333332" />
         <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/one.xml" value="0.18333333333333332" />
-=======
-        <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/activity_list_item.xml" value="0.18333333333333332" />
-        <entry key="..\:/Users/gram/AndroidStudioProjects/wwm/app/src/main/res/layout/activity_walk.xml" value="0.3333333333333333" />
->>>>>>> Stashed changes
+        <entry key="app/src/main/res/layout/activity_walk_finish.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -151,7 +151,7 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="16dp"
+                    android:layout_height="30dp"
                     android:text="걸음"
                     android:textSize="14dp"
                     android:textColor="@color/basic2"
@@ -185,7 +185,7 @@
                 <TextView
                     android:id="@+id/finish_current_distance"
                     android:layout_width="wrap_content"
-                    android:layout_height="28dp"
+                    android:layout_height="wrap_content"
                     android:text="3.7"
                     android:textSize="24dp"
                     android:textColor="@color/theme2"
@@ -195,8 +195,8 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="16dp"
-                    android:text="km"
+                    android:layout_height="30dp"
+                    android:text="m"
                     android:textSize="14dp"
                     android:textColor="@color/basic2"
                     android:fontFamily="@font/pretendard_medium"
@@ -229,7 +229,7 @@
                 <TextView
                     android:id="@+id/finish_currentKcal"
                     android:layout_width="wrap_content"
-                    android:layout_height="22dp"
+                    android:layout_height="26dp"
                     android:layout_gravity="center"
                     android:fontFamily="@font/pretendard_semibold"
                     android:letterSpacing="-0.025"
@@ -246,7 +246,7 @@
                     android:fontFamily="@font/pretendard_medium"
                     android:letterSpacing="-0.025"
                     android:layout_gravity="center"
-                    android:layout_marginTop="2dp"/>
+                    android:layout_marginTop="10dp"/>
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>

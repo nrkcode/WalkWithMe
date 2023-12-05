@@ -17,6 +17,7 @@ public class walkFinishActivity extends AppCompatActivity {
     TextView finish_currentSteps;
     TextView finish_current_distance;
     TextView finish_currentKcal;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +26,8 @@ public class walkFinishActivity extends AppCompatActivity {
         //이전 인텐트에서 변수 받아오기
         Intent intent = getIntent();
         int currentSteps = intent.getIntExtra("currentSteps", 123);
-        double current_distance = intent.getDoubleExtra("current_distance",123);
-        double currentKcal = intent.getDoubleExtra("currentKcal",123);
+        double current_distance = intent.getDoubleExtra("current_distance", 123);
+        double currentKcal = intent.getDoubleExtra("currentKcal", 123);
         String ss = intent.getStringExtra("hour");
         String hh = intent.getStringExtra("mm");
         String mm = intent.getStringExtra("ss");
@@ -44,5 +45,15 @@ public class walkFinishActivity extends AppCompatActivity {
         finish_current_distance.setText(String.valueOf(current_distance));
         finish_currentKcal.setText(String.valueOf(currentKcal));
 
+        //인텐트로 홈화면 이동
+        Button button = (Button) findViewById(R.id.register3buttonfront);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
 }
