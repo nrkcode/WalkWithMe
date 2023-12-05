@@ -57,6 +57,23 @@ public class WalkInfoActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+        String category = intent.getStringExtra("category");
+        String address = intent.getStringExtra("address");
+        String distance = intent.getStringExtra("distance");
+
+        // 가져온 데이터를 TextView에 설정
+        TextView nameTextView = findViewById(R.id.nameTextView);
+        TextView categoryTextView = findViewById(R.id.categoryTextView);
+        TextView addressTextView = findViewById(R.id.addressTextView);
+        TextView distanceTextView = findViewById(R.id.distanceTextView);
+
+        nameTextView.setText(name);
+        categoryTextView.setText(category);
+        addressTextView.setText(address);
+        distanceTextView.setText(distance);
+
         //뒤로가기 버튼
         Button button = (Button) findViewById(R.id.back2);
         button.setOnClickListener(new View.OnClickListener() {

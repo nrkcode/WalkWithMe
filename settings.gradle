@@ -18,3 +18,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Walk with me"
 include ':app'
+
