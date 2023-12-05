@@ -56,6 +56,7 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
     private Chronometer chronometer; //타이머 view
     private boolean running; // 진행 중인지 확인하는 변수
     private long pauseOffset; // 정지 오프셋
+    private String ss,hh,mm;
     SensorManager sensorManager;
     Sensor stepCountSensor;
     TextView stepCountView;
@@ -65,9 +66,11 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
 
     Dialog dilaog01; // 커스텀 다이얼로그
 
-    int currentSteps = 0;//현재 걸음수
-    double current_distance = 0;//현재 걸은거리
-    double currentKcal = 0;//현재 소모 칼로리
+    private int currentSteps = 0;//현재 걸음수
+    private double current_distance = 0;//현재 걸은거리
+    private double currentKcal = 0;//현재 소모 칼로리
+
+    private String timeee = "";
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
@@ -109,19 +112,23 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
         }
 
         chronometer = findViewById(R.id.chronometer);
-        chronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener(){ // 시분초 표현
+        chronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
             @Override
             public void onChronometerTick(Chronometer cArg) {
                 long time = SystemClock.elapsedRealtime() - cArg.getBase();
-                int h   = (int)(time /3600000);
-                int m = (int)(time - h*3600000)/60000;
-                int s= (int)(time - h*3600000- m*60000)/1000 ;
-                String hh = h < 10 ? "0"+h: h+"";
-                String mm = m < 10 ? "0"+m: m+"";
-                String ss = s < 10 ? "0"+s: s+"";
-                cArg.setText(hh+":"+mm+":"+ss);
+                int h = (int)(time / 3600000);
+                int m = (int)(time - h * 3600000) / 60000;
+                int s = (int)(time - h * 3600000 - m * 60000) / 1000;
+                hh = h < 10 ? "0" + h : String.valueOf(h);
+                mm = m < 10 ? "0" + m : String.valueOf(m);
+                ss = s < 10 ? "0" + s : String.valueOf(s);
+                timeee = hh + ":" + mm + ":" + ss;
+
+
+                cArg.setText(timeee);
             }
         });
+
         chronometer.setFormat("%s"); // 타이머 포멧 등록
 
         Button startBtnf = findViewById(R.id.start_btn_f);
@@ -139,7 +146,7 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
                 startBtn.setVisibility(startBtn.INVISIBLE);
 
                 if(!running){
-                    chronometer.setBase(SystemClock.elapsedRealtime() - pauseOffset);
+                    //chronometer.setBase(SystemClock.elapsedRealtime() - pauseOffset);
                     chronometer.start();
                     running = true;
                 }
@@ -181,7 +188,7 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
         resetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                chronometer.setBase(SystemClock.elapsedRealtime());
+                //chronometer.setBase(SystemClock.elapsedRealtime());
                 pauseOffset = 0;
                 chronometer.stop();
                 running = false;
@@ -375,6 +382,7 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
 
     }
 
+
     // dialog01을 디자인하는 함수
     public void showDialog01(){
         dilaog01.show(); // 다이얼로그 띄우기
@@ -400,12 +408,18 @@ public class InWalk extends AppCompatActivity implements MapView.CurrentLocation
             @Override
 
             public void onClick(View view) {
+
                 // 원하는 기능 구현
                 Intent intent = new Intent(getApplicationContext(), walkFinishActivity.class);
                 intent.putExtra("currentSteps", currentSteps);
                 intent.putExtra("current_distance", current_distance);
                 intent.putExtra("currentKcal", currentKcal);
+                intent.putExtra("hour", hh);
+                intent.putExtra("minute",mm);
+                intent.putExtra("second",ss);
+                intent.putExtra("finishTime",timeee);
                 startActivity(intent);
+                chronometer.setBase(SystemClock.elapsedRealtime());
             }
         });
     }

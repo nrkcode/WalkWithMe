@@ -61,15 +61,16 @@
             android:src="@drawable/walk_finish_box"/>
 
         <TextView
+            android:id="@+id/finishTime"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/pretendard_semibold"
+            android:gravity="center"
+            android:letterSpacing="0.025"
             android:text="00:12:34"
             android:textColor="@color/theme2"
-            android:textSize="36dp"
-            android:fontFamily="@font/pretendard_semibold"
-            android:letterSpacing="0.025"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:textSize="36dp" />
     </FrameLayout>
 
     <!-- 걸음수, 걸은거리, 소모열량 -->
@@ -138,14 +139,15 @@
                     android:layout_marginTop="10dp"/>
 
                 <TextView
+                    android:id="@+id/finish_currentSteps"
                     android:layout_width="wrap_content"
-                    android:layout_height="28dp"
-                    android:text="1,234"
-                    android:textSize="24dp"
-                    android:textColor="@color/theme2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:fontFamily="@font/pretendard_semibold"
                     android:letterSpacing="-0.025"
-                    android:layout_gravity="center"/>
+                    android:text="1,234"
+                    android:textColor="@color/theme2"
+                    android:textSize="24dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -181,6 +183,7 @@
                     android:layout_marginTop="10dp"/>
 
                 <TextView
+                    android:id="@+id/finish_current_distance"
                     android:layout_width="wrap_content"
                     android:layout_height="28dp"
                     android:text="3.7"
@@ -224,14 +227,15 @@
                     android:layout_marginTop="10dp"/>
 
                 <TextView
+                    android:id="@+id/finish_currentKcal"
                     android:layout_width="wrap_content"
-                    android:layout_height="28dp"
-                    android:text="131"
-                    android:textSize="24dp"
-                    android:textColor="@color/theme2"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
                     android:fontFamily="@font/pretendard_semibold"
                     android:letterSpacing="-0.025"
-                    android:layout_gravity="center"/>
+                    android:text="131"
+                    android:textColor="@color/theme2"
+                    android:textSize="24dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
